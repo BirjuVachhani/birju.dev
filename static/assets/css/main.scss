@@ -1,0 +1,144 @@
+---
+---
+
+@import "type-theme";
+
+body {
+    font-size: 1.25em;
+}
+
+section {
+    p,h1,h2,h3,h4,h5,h6,ul,ol,.tags {
+        padding-left: 25%;
+        padding-right: 25%;
+    }
+}
+
+blockquote {
+    border: none;
+    padding-right: 25%;
+    padding-left: 25%;
+}
+
+.highlight pre {
+    overflow-x: hidden;
+    white-space: pre-wrap;
+    padding: 3%;
+    width: fit-content;
+    min-width: 50%;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.highlight {
+    word-wrap: break-word;
+    overflow: auto;
+    flex-wrap: inherit;
+    background-color: #fff;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+article  {
+    padding: 0px;
+}
+
+@media only screen and (max-width: 800px) {
+    .title{
+        font-size: 2.1em;
+    }
+    article .subtitle{
+        font-size: 1.7em;
+    }
+    h1{
+        font-size: 2.1em;
+    }
+    h2{
+        font-size: 1.8em;
+    }
+    h3{
+        font-size: 1.6em;
+    }
+    section {
+        p,h1,h2,h3,h4,h5,h6,ul,ol,.tags {
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+    }
+    blockquote {
+        border: none;
+        padding-right: 10%;
+        padding-left: 10%;
+    }
+
+    .highlight pre {
+        overflow-x: hidden;
+        white-space: pre-wrap;
+        padding: 3%;
+        width: fit-content;
+        min-width: 50%;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }   
+}
+
+@media only screen and (max-width: 600px) {
+    .title{
+        font-size: 1.8em;
+    }
+    article .subtitle{
+        font-size: 1.4em;
+    }
+    h1{
+        font-size: 2em;
+    }
+    h2{
+        font-size: 1.6em;
+    }
+    h3{
+        font-size: 1.4em;
+    }
+    section {
+        p,h1,h2,h3,h4,h5,h6,ul,ol,.tags {
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+    }
+    blockquote {
+        border: none;
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+    .highlight pre {
+        overflow-x: hidden;
+        white-space: pre-wrap;
+        padding: 3%;
+        width: fit-content;
+        min-width: 50%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    div.highlight {
+        border-radius: 0;
+        border: none;
+        background-color: #202020;
+    }
+}
+
+blockquote p {
+    padding: 1em;
+    border-left: 3px solid #ffeb8e;
+    border-radius: 8px;
+    background-color: #fff8dc;
+}
+
+.tag {
+    display: inline-block;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
