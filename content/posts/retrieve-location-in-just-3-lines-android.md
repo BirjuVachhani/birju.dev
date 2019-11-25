@@ -95,6 +95,14 @@ Locus.getCurrentLocation(this) { result ->
 }
 ```
 
+## Stopping Location Updates
+
+Stopping location updates is quite easy and clean:
+
+```kotlin
+Locus.stopLocationUpdates()
+```
+
 ## Configure Locus
 
 Locus is highly customisable and lets you customise the default options in very easy way.
@@ -186,7 +194,7 @@ Locus.configure {
 }
 ```
 
-The `request{}` block lets you access the `LocationRequest` instance so you can fully configure is according to your needs.
+The `request{}` block lets you access the `LocationRequest` instance so you can fully configure is according to your needs. However if you want to reset Locus to its default location request configuration, just call `Locus.setDefaultConfig()`.
 
 ### Background Location Updates
 
