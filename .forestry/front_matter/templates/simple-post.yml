@@ -48,6 +48,7 @@ fields:
     - Wordpress
   label: Category
 pages:
+- content/posts/early-introduction-of-viewpager2.md
 - content/posts/retrieve-location-in-just-3-lines-android.md
 - content/posts/what-s-new-in-android-architecture-components-google-i-o-19.md
 - content/posts/android-recycler-view-data-binding.md
@@ -56,6 +57,5 @@ pages:
 - content/posts/jetpack-compose-columns.md
 - content/posts/how-to-start-a-self-hosted-blog.md
 - content/posts/getting-started-with-jenkins-android.md
-- content/posts/early-introduction-of-viewpager2.md
 - content/posts/android-auto-sizing-text-view.md
 - content/posts/a-better-way-to-manage-gradle-build-script.md
