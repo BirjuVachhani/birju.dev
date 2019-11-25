@@ -48,10 +48,10 @@ fields:
     - Wordpress
   label: Category
 pages:
+- content/posts/android-recycler-view-data-binding.md
 - content/posts/retrieve-location-in-just-3-lines-android.md
 - content/posts/early-introduction-of-viewpager2.md
 - content/posts/what-s-new-in-android-architecture-components-google-i-o-19.md
-- content/posts/android-recycler-view-data-binding.md
 - content/posts/migrating-gradle-build-scripts-to-kotlin-dsl.md
 - content/posts/listadapter-a-recyclerview-adapter-extension.md
 - content/posts/jetpack-compose-columns.md

@@ -1,7 +1,7 @@
 ---
 title: RecyclerView Data Binding
 author: Birju Vachhani
-date: 2018-05-22T10:25:51.000+00:00
+date: 2019-11-26T00:00:00+05:30
 toc: false
 images: 
 tags:
@@ -18,6 +18,7 @@ Howdy folks!😎 I assume you all know about RecyclerView and how it works by re
 What I personally don’t like about it is creating a ViewHolder class, use findViewById() to get views and bind data to those views whenever needed (of course there’s more not to like about RecyclerView but let’s not talk about it right now 😐). But here comes the smart data binding: no findViewById(), no manually binding data to the views 😄. Follow my lead and I’ll show you how it’s done.
 
 <br/>
+
 ### Enable Data Binding
 
 To use data binding, one have to enable it first. Go to your app’s **build.gradle** file and add following code:
@@ -31,9 +32,10 @@ defaultConfig {
 Sync project and data binding will be enabled.
 
 <br/>
+
 ### Create RecyclerView in the Activity
 
-To use data binding in any layout, **\<layout>** should be the root tag in that xml file. make changes as shown below in Activity’s xml file:
+To use data binding in any layout, **<layout>** should be the root tag in that xml file. make changes as shown below in Activity’s xml file:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -60,6 +62,7 @@ To use data binding in any layout, **\<layout>** should be the root tag in that 
 **<data class=”MainActivityBinding”/>** instructs to create **MainActivityBinding** class for binding the Activity.
 
 <br/>
+
 ### Create layout for single row of RecyclerView
 
 Create a xml file for single row layout and make sure that <layout> is the root tag. declare a data class that is to be generated as binding class for that layout.
@@ -78,7 +81,7 @@ Create a xml file for single row layout and make sure that <layout> is the root 
 </layout>
 ```
 
-Here, **\<variable name=”” type=”” />** defines the POJO class that is to be used to get binding data. i.e. we want to display user information like image, name and city. then the User POJO will be used to get binding data. **type=””** takes fully qualified class name with package path and **name=””** takes a name that is used to refer to POJO in the xml file.
+Here, **<variable name=”” type=”” />** defines the POJO class that is to be used to get binding data. i.e. we want to display user information like image, name and city. then the User POJO will be used to get binding data. **type=””** takes fully qualified class name with package path and **name=””** takes a name that is used to refer to POJO in the xml file.
 
 for example, **com.birjuvachhani.recyclerviewdatabinding.User** is the fully qualified POJO class name. and **user** will be used to refer to POJO in the xml like shown below:
 
@@ -96,6 +99,7 @@ for example, **com.birjuvachhani.recyclerviewdatabinding.User** is the fully qua
 Here, **android:text=”@{user.name}”** refers to the name stored in **User** POJO.
 
 <br/>
+
 ### Create ViewHolder for the RecyclerView
 
 In the constructor of ViewHolder class, we pass Binding object for single row instead of passing the view for single row.
@@ -121,6 +125,7 @@ class UserViewHolder extends RecyclerView.ViewHolder {
 Here, **executePendingBindings()** method is very important! It forces the bindings to execute immediately rather than executing later until the next frame.
 
 <br/>
+
 ### Create Adapter for the RecyclerView
 
 The remaining task is to create Adapter that handles data for the RecyclerView. There are 3 important methods that must be overridden:
@@ -147,6 +152,7 @@ public int getItemCount() {
 In **onCreateViewHolder()** method, we inflate layout using binding class, create binding object and return the ViewHolder object. In **onBindViewHolder()** method, we call bind() method of the ViewHolder class and pass POJO to be bound with the view from the list.
 
 <br/>
+
 ### Loading Image from resources with data binding
 
 We provide resource id in the ImageView in xml but how to load that image from resources using data binding? Follow me:
