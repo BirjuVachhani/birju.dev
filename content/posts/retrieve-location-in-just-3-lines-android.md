@@ -198,7 +198,7 @@ The `request{}` block lets you access the `LocationRequest` instance so you can 
 
 ### Background Location Updates
 
-Locus requests location updates in such a way that it works by default in background also, but Until Android 10. Android 10 has some major privacy changes for location permissions. Starting from Android 10, Location updates won't be available by default when your app is in background. You can read more about Android 10 Location permission changes here. I won't be going in deep about those changes and how to handle them. 
+Locus requests location updates in such a way that it works by default in background also, but Until Android 10. Android 10 has some major privacy changes for location permissions. Starting from Android 10, Location updates won't be available by default when your app is in background. You can read more about Android 10 Location permission changes here. I won't be going in deep about those changes and how to handle them.
 
 If you have checked the above link, then now you know that you have one extra location permission that needs to be handled for getting background location updates which is `android.permission.ACCESS_BACKGROUND_LOCATION`. Again, this can a tedious task to write all those code to handle background updates for Android 10.
 
@@ -229,3 +229,7 @@ If you face any issues using Locus and want to see the debug logs, then you can 
 ```kotlin
 Locus.setLogging(true)
 ```
+
+## Conclusion
+
+Locus makes a developer's life very easy when it comes to retrieve location. It is highly customisable and will fulfil most of the requirements that a developer needs. However if you can't find what you're looking for then you always can request a feature of file a bug on [github](https://github.com/birjuvachhani/locus-android). 
