@@ -137,3 +137,12 @@ Locus.configure {
 Locus also shows rationale dialogs when permissions are denied one or more times.
 
 {{< figure src="/assets/images/location-rationale.png" alt="Location Rationale Dialog" caption="Location Rationale Dialog" >}}
+
+Changing these rationale texts is also easy. You can use `Locus.configure()` method to configure almost everything in Locus.
+
+```kotlin
+Locus.configure {
+    rationaleText = "new text"
+    rationaleTitle = "new title"
+}
+```
