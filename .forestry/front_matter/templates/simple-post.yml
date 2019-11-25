@@ -48,7 +48,6 @@ fields:
     - Wordpress
   label: Category
 pages:
-- ".forestry/snippets/image-snippet..snippet"
 - content/posts/retrieve-location-in-just-3-lines-android.md
 - content/posts/early-introduction-of-viewpager2.md
 - content/posts/what-s-new-in-android-architecture-components-google-i-o-19.md
