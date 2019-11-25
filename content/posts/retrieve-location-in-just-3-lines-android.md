@@ -113,4 +113,4 @@ But no worries, guess what! all this boilerplate is already done for you. Locus 
 
 It also works if location is disabled. It will ask user to enable it. Following dialog will be showed in these cases:
 
-![](/assets/images/location-disable-dialog.png)
+{{< figure src="/assets/images/location-disable-dialog.png" alt="Location Disabled Dialog" caption="Location Disabled Dialog" >}}
