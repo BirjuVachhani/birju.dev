@@ -115,7 +115,7 @@ It also works if location is disabled. It will ask user to enable it. Following 
 
 {{< figure src="/assets/images/location-disable-dialog.png" alt="Location Disabled Dialog" caption="Location Disabled Dialog" >}}
 
-This dialog is also configurable. If you want to change the dialog texts, you can use `Locus.configure()` function.
+This dialog is also configurable. If you want to change the dialog texts, you can use `Locus.configure{}` block.
 
 ```kotlin
 Locus.configure { 
@@ -138,7 +138,7 @@ Locus also shows rationale dialogs when permissions are denied one or more times
 
 {{< figure src="/assets/images/location-rationale.png" alt="Location Rationale Dialog" caption="Location Rationale Dialog" >}}
 
-Changing these rationale texts is also easy. You can use `Locus.configure()` method to configure almost everything in Locus.
+Changing these rationale texts is also easy. You can use `Locus.configure{}` block to configure almost everything in Locus.
 
 ```kotlin
 Locus.configure {
