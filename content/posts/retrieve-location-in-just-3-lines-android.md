@@ -109,4 +109,8 @@ Ever seen this dialog when using Google Maps App? It indicates that the your cur
 
 In order to satisfy the required settings, you need to first resolve the current device settings and see if it satisfies the need. If not, then you can request the user to change the device settings so fulfil your purpose. So, when you request for a change in the settings, this dialog will be displayed to the user by the Android system. If you go though [this](https://developer.android.com/training/location/change-location-settings), then you'll come to know that it requires quite a lot code to achieve it.
 
-But no worries, guess what! all this boilerplate is already done for you. Locus handles location setting resolution by default and displays a dialog to the user saying that the device's location settings needs to be changed. 
+But no worries, guess what! all this boilerplate is already done for you. Locus handles location setting resolution by default and displays a dialog to the user saying that the device's location settings needs to be changed.
+
+It also works if location is disabled. It will ask user to enable it. Following dialog will be showed in these cases:
+
+![](/assets/images/location-disable-dialog.png)
