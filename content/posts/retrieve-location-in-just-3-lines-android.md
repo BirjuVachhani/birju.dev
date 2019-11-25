@@ -22,7 +22,7 @@ But what if I tell you that you can retrieve location in just 3 lines of code wi
 
 ## Locus
 
-![](assets/images/locus.png)
+![](/assets/images/locus.png)
 
 I have done this hassle many times and then I thought, what if I could get location in just few lines of coe without writing this much boilerplate? Then I developed `Locus` which simply let's you do that in just 3 lines of code!
 

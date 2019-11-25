@@ -4,7 +4,7 @@ date: 2019-03-16T10:25:51.000+00:00
 toc: false
 author: Birju Vachhani
 images: 
-featured: "/assets/img/2019-03-16-early-introduction-of-viewpager2/banner.png"
+featured: "/assets/images/2019-03-16-early-introduction-of-viewpager2/banner.png"
 tags:
 - android
 - ViewPager2
