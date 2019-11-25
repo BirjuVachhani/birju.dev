@@ -1,0 +1,122 @@
+baseURL = "/"
+title   = "Birju Vachhani"
+
+DefaultContentLanguage = "en"
+theme = "hugo-theme-hello-friend-ng"
+
+# Syntax Highlighting
+PygmentsCodeFences = true
+PygmentsStyle = "solarized-dark256"
+
+rssLimit  = 10  # Maximum number of items in the RSS feed.
+# copyright = "2019 (c) Birju Vachhani"
+
+# googleAnalytics = ""
+# disqusShortname = ""
+
+# Project Structure
+archetypeDir = "archetypes"
+contentDir   = "content"
+dataDir      = "data"
+layoutDir    = "layouts"
+publishDir   = "public"
+
+buildDrafts  = false
+buildFuture  = false
+buildExpored = false
+canonifyURLs = true
+
+enableRobotsTXT = true
+enableGitInfo   = false
+enableEmoji     = true
+enableMissingTranslationPlaceholders = false
+disableRSS     = false
+disableSitemap = false
+disable404     = false
+disableHugoGeneratorInject = false
+
+# [permalinks]
+#   posts = "/posts/:year/:month/:title/"
+
+[author]
+  name = "Birju Vachhani"
+
+[blackfriday]
+  hrefTargetBlank = true
+
+[taxonomies]
+  tag      = "tags"
+  category = "categories"
+
+[params]
+  dateform        = "January 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04 -0700"
+
+  # Metadata mostly used in document's head
+  description = "A Software Engineer's Home"
+  keywords = ""
+  images = [""]
+
+  homeSubtitle = ""
+
+  # # Directory name of your blog content (default is `content/posts`)
+  contentTypeName = "posts"
+  # # Default theme "light" or "dark"
+  defaultTheme = "dark"
+  themeColor = "#252627"
+  # # Colors for favicons
+  [params.favicon.color]
+    mask = "#252627"
+    msapplication = "#252627"
+    theme = "#252627"
+
+  [params.logo]
+    logoText     = "$ birju.vachhani"
+    logoHomeLink = "/"
+  #   # Set to a valid CSS color to change the cursor in the logo.
+    logoColor    = "#ff4433"
+
+  # Social icons
+  [[params.social]]
+    name = "twitter"
+    url  = "https://twitter.com/birjuvachhani"
+
+  [[params.social]]
+    name = "email"
+    url  = "mailto:brvachhani@gmail.com"
+
+  [[params.social]]
+    name = "github"
+    url  = "https://github.com/birjuvachhani"
+
+  [[params.social]]
+    name = "linkedin"
+    url  = "https://www.linkedin.com/in/birju-vachhani-56b700147/"
+
+  [[params.social]]
+    name = "stackoverflow"
+    url  = "https://stackoverflow.com/users/9199362/birju-vachhani"
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name       = "About"
+    url        = "about/"
+  [[menu.main]]
+    identifier = "posts"
+    name       = "Blog"
+    url        = "posts/"
+  [[menu.main]]
+    identifier = "tags"
+    name       = "Tags"
+    url        = "tags/"
+  [[menu.main]]
+    identifier = "categories"
+    name       = "Categories"
+    url        = "categories/"
+  [[menu.main]]
+    identifier = "projects"
+    name       = "Projects"
+    url        = "projects/"

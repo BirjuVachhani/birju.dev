@@ -1,0 +1,61 @@
+---
+label: Simple Post
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: Title
+  config:
+    required: true
+- type: text
+  name: author
+  label: Author
+  hidden: true
+  config:
+    required: true
+  default: Birju Vachhani
+- type: datetime
+  name: date
+  label: date
+  config:
+    required: false
+  default: now
+- name: cover
+  type: file
+  config:
+    maxSize: 250
+  label: Cover
+- name: tags
+  type: tag_list
+  default:
+  - android
+  label: Tags
+- name: categories
+  type: list
+  config:
+    use_select: true
+    min: '1'
+    max: ''
+    source:
+      type: simple
+    options:
+    - Android
+    - Kotlin
+    - Flutter
+    - Hugo
+    - Jekyll
+    - Ktor
+    - Wordpress
+  label: Category
+pages:
+- content/posts/retrieve-location-in-just-3-lines-android.md
+- content/posts/what-s-new-in-android-architecture-components-google-i-o-19.md
+- content/posts/android-recycler-view-data-binding.md
+- content/posts/migrating-gradle-build-scripts-to-kotlin-dsl.md
+- content/posts/listadapter-a-recyclerview-adapter-extension.md
+- content/posts/jetpack-compose-columns.md
+- content/posts/how-to-start-a-self-hosted-blog.md
+- content/posts/getting-started-with-jenkins-android.md
+- content/posts/early-introduction-of-viewpager2.md
+- content/posts/android-auto-sizing-text-view.md
+- content/posts/a-better-way-to-manage-gradle-build-script.md
