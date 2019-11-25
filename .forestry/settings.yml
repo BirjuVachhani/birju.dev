@@ -5,6 +5,12 @@ admin_path: "/static/admin"
 webhook_url: 
 sections:
 - type: directory
+  path: ".forestry/snippets"
+  label: Snippets
+  create: documents
+  match: "**/*"
+  new_doc_ext: ".snippet"
+- type: directory
   path: content/posts
   label: Posts
   create: all
