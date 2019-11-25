@@ -147,7 +147,7 @@ Locus.configure {
 }
 ```
 
-### Configure Open Settings Dialog Texts
+### Configure Permission Blocked Dialog Text
 
 When a permission is denied by the user and user selects `Do not ask again` option, Locus shows permission blocked dialog which lets user navigate to settings screen to enable location permission.
 
