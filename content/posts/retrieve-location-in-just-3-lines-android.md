@@ -99,4 +99,8 @@ Locus.getCurrentLocation(this) { result ->
 
 Locus is highly customisable and lets you customise the default options in very easy way.
 
-Note that `Locus` is a singlton object which lets you configure locus and retrieve location. The reason behind it is that by default, if you request two location updates for diffent intervals, you will receive location updates for both in the shorter interval! This applies to other apps also, that said, if there's another app that requests location for shorter interval than your's as the same time, you'll receive location
+> Note that `Locus` is a singleton object which lets you configure locus and retrieve location. The reason behind it is that by default, if you request two location updates for different intervals, you will receive location updates for both in the shorter interval! This applies to other apps also, that said, if there's another app that requests location for shorter interval than yours at the same time, you'll receive location those updates instead of your configured time.
+
+### Location Settings Resolution
+
+{{< figure src="/assets/images/android-location-settings-dialog.png" alt="Location Settings Dialog" caption="Location Settings Dialog" >}}
