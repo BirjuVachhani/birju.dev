@@ -233,3 +233,5 @@ Locus.setLogging(true)
 ## Conclusion
 
 Locus makes a developer's life very easy when it comes to retrieve location. It is highly customisable and will fulfil most of the requirements that a developer needs. However if you can't find what you're looking for then you always can request a feature of file a bug on [github](https://github.com/birjuvachhani/locus-android). 
+
+If you liked what you read, don't forget to start [this](https://github.com/birjuvachhani/locus-android) repository. Happy coding!
