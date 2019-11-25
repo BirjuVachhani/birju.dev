@@ -104,3 +104,9 @@ Locus is highly customisable and lets you customise the default options in very 
 ### Location Settings Resolution
 
 {{< figure src="/assets/images/android-location-settings-dialog.png" alt="Location Settings Dialog" caption="Location Settings Dialog" >}}
+
+Ever seen this dialog when using Google Maps App? It indicates that the your current location settings are creating conflict with the location settings that the app requires. In other words, the required settings by the app is not satisfied by the device settings. Example: Your app requires high accuracy location whereas the device location settings are set to low accuracy or battery saver mode. This won't allow your app to retrieve location updates that are highly accurate.
+
+In order to satisfy the required settings, you need to first resolve the current device settings and see if it satisfies the need. If not, then you can request the user to change the device settings so fulfil your purpose. So, when you request for a change in the settings, this dialog will be displayed to the user by the Android system. If you go though [this](https://developer.android.com/training/location/change-location-settings), then you'll come to know that it requires quite a lot code to achieve it.
+
+But no worries, guess what! all this boilerplate is already done for you. Locus handles location setting resolution by default and displays a dialog to the user saying that the device's location settings needs to be changed. 
