@@ -64,7 +64,7 @@ dependencies {
 
 At the time of writing this blog, the latest version is `3.0.1`. You can get the latest version from [here](https://github.com/birjuvachhani/locus-android). You look at the [wiki](https://github.com/BirjuVachhani/locus-android/wiki) of the project for latest changes.
 
-## Retrieving continuous Location
+## Retrieving Continuous Location
 
 In your activity/fragment, just add following lines of code and you'll be able to get location updates.
 
