@@ -161,3 +161,63 @@ Locus.configure {
     blockedTitle = "new title"
 }
 ```
+
+### Configure Location Request
+
+Locus by default uses following request settings for requesting location updates:
+
+```kotlin
+priority = LocationRequest.PRIORITY_HIGH_ACCURACY
+interval = 1000L
+fastestInterval = 1000L
+maxWaitTime = 1000L
+```
+
+If you want to use different location request settings then you can configure it easily like this:
+
+```kotlin
+Locus.configure {
+    request {
+        priority = LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY
+        interval = 2500L
+        fastestInterval = 2500L
+        maxWaitTime = 5000L
+    }
+}
+```
+
+The `request{}` block lets you access the `LocationRequest` instance so you can fully configure is according to your needs.
+
+### Background Location Updates
+
+Locus requests location updates in such a way that it works by default in background also, but Until Android 10. Android 10 has some major privacy changes for location permissions. Starting from Android 10, Location updates won't be available by default when your app is in background. You can read more about Android 10 Location permission changes here. I won't be going in deep about those changes and how to handle them. 
+
+If you have checked the above link, then now you know that you have one extra location permission that needs to be handled for getting background location updates which is `android.permission.ACCESS_BACKGROUND_LOCATION`. Again, this can a tedious task to write all those code to handle background updates for Android 10.
+
+Luckily Locus supports that out of the box! Yes, you read that right! Background location updates are off by default, which means that Locus won't ask for `android.permission.ACCESS_BACKGROUND_LOCATION` when running on Android 10. So, if you want to get location updates in background also, you can do it very easily:
+
+```kotlin
+Locus.configure {
+    enableBackgroundUpdates = true
+}
+```
+
+Note that enabling this will ask user to grant permission for background location also but it's user's choice not to do so. So, if the user denies it then Locus won't force user to provide it and will run in foreground mode which means you'll still get update while the app is in foreground as it is suitable for most of the usecases.
+
+But if your app doesn't function if you can't get location updates in background also, then you might need to force user to grant permission for background location updates. If your app tracks user to display position on map or something like that which requires continuous location updates in background also and it won't be usable in you don't have background location permission. Then, you can force user to grant background location permission.
+
+```kotlin
+Locus.configure {
+    forceBackgroundUpdates = true
+}
+```
+
+This will force user to grant background location permission by showing the rationale dialog that this permission is necessary for this app to run and the user should grant it.
+
+### Locus Logging
+
+If you face any issues using Locus and want to see the debug logs, then you can enable logs like this:
+
+```kotlin
+Locus.setLogging(true)
+```
