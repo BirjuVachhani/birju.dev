@@ -123,3 +123,17 @@ Locus.configure {
     resolutionText = "new description"
 }
 ```
+
+However, if you don't want to use this location settings resolution feature then you can turn it off:
+
+```kotlin
+Locus.configure { 
+    shouldResolveRequest = false
+}
+```
+
+### Configure Rationale Dialog Texts
+
+Locus also shows rationale dialogs when permissions are denied one or more times.
+
+{{< figure src="/assets/images/location-rationale.png" alt="Location Rationale Dialog" caption="Location Rationale Dialog" >}}
