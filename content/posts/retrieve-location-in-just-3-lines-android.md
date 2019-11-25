@@ -146,3 +146,18 @@ Locus.configure {
     rationaleTitle = "new title"
 }
 ```
+
+### Configure Open Settings Dialog Texts
+
+When a permission is denied by the user and user selects `Do not ask again` option, Locus shows permission blocked dialog which lets user navigate to settings screen to enable location permission.
+
+{{< figure src="/assets/images/location-blocked-dialog.png" alt="Location Permission Blocked Dialog" caption="Location Permission Blocked Dialog" >}}
+
+To configure this permission blocked dialog texts:
+
+```kotlin
+Locus.configure {
+    blockedText = "new text"
+    blockedTitle = "new title"
+}
+```
