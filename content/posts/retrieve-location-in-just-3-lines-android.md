@@ -62,11 +62,11 @@ dependencies {
 }
 ```
 
-At the time of writing this blog, the latest version is `3.0.1`. You can get the latest version from [here](https://github.com/birjuvachhani/locus-android). You look at the [wiki](https://github.com/BirjuVachhani/locus-android/wiki) of the project for latest changes.
+At the time of writing this blog, the latest version is `3.0.1`. You can get the latest version from [here](https://github.com/birjuvachhani/locus-android). You can look at the [wiki](https://github.com/BirjuVachhani/locus-android/wiki) of the project for latest changes.
 
 ## Retrieving Continuous Location
 
-In your activity/fragment, just add following lines of code and you'll be able to get location updates.
+In your `activity/fragment`, just add following lines of code and you'll be able to get location updates.
 
 ```kotlin
 // starts continuos location updates
@@ -82,11 +82,11 @@ Locus.startLocationUpdates(this) { result ->
 * Location Settings resolution for high accurate location updates
 * Lifecyle aware out of the box
 
-Awesome, right? Those magical 3 lines and you're life is made easy!
+Awesome, right? Those magical 3 lines and your life is made easy!
 
 ## Get Single Location Update
 
-Only want current location for single time? That's easy too! Just the method name changes, rest stays the same.
+Only want current location for single time? That's easy too! Only the method name changes, rest stays the same.
 
 ```kotlin
 Locus.getCurrentLocation(this) { result ->
