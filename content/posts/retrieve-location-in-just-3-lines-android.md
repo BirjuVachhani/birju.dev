@@ -132,13 +132,15 @@ Locus is highly customisable and lets you customise the default options in very 
 
 {{< figure src="/assets/images/android-location-settings-dialog.png" alt="Location Settings Dialog" caption="Location Settings Dialog" >}}
 
-Ever seen this dialog when using Google Maps App? It indicates that the your current location settings are creating conflict with the location settings that the app requires. In other words, the required settings by the app is not satisfied by the device settings. Example: Your app requires high accuracy location whereas the device location settings are set to low accuracy or battery saver mode. This won't allow your app to retrieve location updates that are highly accurate.
+Ever seen this dialog when using Google Maps App? It indicates that your current location settings are creating conflict with the location settings that the app requires. In other words, the required settings by the app is not satisfied by the device settings.
 
-In order to satisfy the required settings, you need to first resolve the current device settings and see if it satisfies the need. If not, then you can request the user to change the device settings so fulfil your purpose. So, when you request for a change in the settings, this dialog will be displayed to the user by the Android system. If you go though [this](https://developer.android.com/training/location/change-location-settings), then you'll come to know that it requires quite a lot code to achieve it.
+**Example:** Your app requires high accuracy location whereas the device location settings are set to low accuracy or battery saver mode. This won't allow your app to retrieve location updates that are highly accurate.
 
-But no worries, guess what! all this boilerplate is already done for you. Locus handles location setting resolution by default and displays a dialog to the user saying that the device's location settings needs to be changed.
+In order to satisfy the required settings, you need to first resolve the current device settings and see if it satisfies the need. If not, then you can request the user to change the device settings to fulfil your purpose. So, when you request for a change in the settings, this dialog will be displayed to the user by the Android system. If you go though [this](https://developer.android.com/training/location/change-location-settings) reference, then you'll come to know that it requires quite a lot code to achieve it.
 
-It also works if location is disabled. It will ask user to enable it. Following dialog will be showed in these cases:
+But no worries, all this boilerplate is already done for you. Locus handles location setting resolution by default and displays a dialog to the user saying that the device's location settings needs to be changed.
+
+It also works if location is disabled. It will ask user to enable it. Following dialog will be showed in these case:
 
 {{< figure src="/assets/images/location-disable-dialog.png" alt="Location Disabled Dialog" caption="Location Disabled Dialog" >}}
 
@@ -213,11 +215,11 @@ Locus.configure {
 }
 ```
 
-The `request{}` block lets you access the `LocationRequest` instance so you can fully configure is according to your needs. However if you want to reset Locus to its default location request configuration, just call `Locus.setDefaultConfig()`.
+The `request{}` block lets you access the `LocationRequest` instance so you can fully configure it according to your needs. However if you want to reset Locus to its default location request configuration, just call `Locus.setDefaultConfig()`.
 
 ### Background Location Updates
 
-Locus requests location updates in such a way that it works by default in background also, but Until Android 10. Android 10 has some major privacy changes for location permissions. Starting from Android 10, Location updates won't be available by default when your app is in background. You can read more about Android 10 Location permission changes here. I won't be going in deep about those changes and how to handle them.
+Locus requests location updates in such a way that it works by default in background also, but Until Android 10. Android 10 has some major privacy changes for location permissions. Starting from Android 10, Location updates won't be available by default when your app is in background. You can read more about Android 10 Location permission changes [here](https://developer.android.com/about/versions/10/privacy/changes). I won't be going in deep about those changes and how to handle them.
 
 If you have checked the above link, then now you know that you have one extra location permission that needs to be handled for getting background location updates which is `android.permission.ACCESS_BACKGROUND_LOCATION`. Again, this can a tedious task to write all those code to handle background updates for Android 10.
 
@@ -229,7 +231,7 @@ Locus.configure {
 }
 ```
 
-Note that enabling this will ask user to grant permission for background location also but it's user's choice not to do so. So, if the user denies it then Locus won't force user to provide it and will run in foreground mode which means you'll still get update while the app is in foreground as it is suitable for most of the usecases.
+Note that enabling this will ask user to grant permission for background location also but it's user's choice not to do so. So, if the user denies it then Locus won't force user to provide it and will run in foreground mode which means you'll still get update while the app is in foreground as it is suitable for most of the use cases.
 
 But if your app doesn't function if you can't get location updates in background also, then you might need to force user to grant permission for background location updates. If your app tracks user to display position on map or something like that which requires continuous location updates in background also and it won't be usable in you don't have background location permission. Then, you can force user to grant background location permission.
 
