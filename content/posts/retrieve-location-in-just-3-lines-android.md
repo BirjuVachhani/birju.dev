@@ -251,6 +251,10 @@ If you face any issues using Locus and want to see the debug logs, then you can 
 Locus.setLogging(true)
 ```
 
+### Theming Dialogs
+
+// TODO
+
 ## Conclusion
 
 Locus makes a developer's life very easy when it comes to retrieve location. It is highly customisable and will fulfil most of the requirements that a developer needs. However if you can't find what you're looking for then you always can request a feature or file a bug on [Github](https://github.com/birjuvachhani/locus-android).
