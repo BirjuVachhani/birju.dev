@@ -80,7 +80,7 @@ Locus.startLocationUpdates(this) { result ->
 
 * Android Permission model with default relational texts
 * Location Settings resolution for high accurate location updates
-* Lifecyle aware out of the box
+* Lifecycle aware out of the box
 
 Awesome, right? Those magical 3 lines and your life is made easy!
 
@@ -231,9 +231,9 @@ Locus.configure {
 }
 ```
 
-Note that enabling this will ask user to grant permission for background location also but it's user's choice not to do so. So, if the user denies it then Locus won't force user to provide it and will run in foreground mode which means you'll still get update while the app is in foreground as it is suitable for most of the use cases.
+Note that enabling this will ask user to grant permission for background location also but it's user's choice not to do so. If the user denies it then Locus won't force user to provide it and will run in foreground mode which means you'll still get update while the app is in foreground as it is suitable for most of the use cases.
 
-But if your app doesn't function if you can't get location updates in background also, then you might need to force user to grant permission for background location updates. If your app tracks user to display position on map or something like that which requires continuous location updates in background also and it won't be usable in you don't have background location permission. Then, you can force user to grant background location permission.
+But if your app doesn't function if you can't get location updates in background also, then you might need to force user to grant permission for background location updates. If your app tracks user to display position on map or something like that which requires continuous location updates in background also and it won't be usable if you don't have background location permission. Then, you can force user to grant background location permission.
 
 ```kotlin
 Locus.configure {
@@ -253,6 +253,6 @@ Locus.setLogging(true)
 
 ## Conclusion
 
-Locus makes a developer's life very easy when it comes to retrieve location. It is highly customisable and will fulfil most of the requirements that a developer needs. However if you can't find what you're looking for then you always can request a feature of file a bug on [Github](https://github.com/birjuvachhani/locus-android).
+Locus makes a developer's life very easy when it comes to retrieve location. It is highly customisable and will fulfil most of the requirements that a developer needs. However if you can't find what you're looking for then you always can request a feature or file a bug on [Github](https://github.com/birjuvachhani/locus-android).
 
-If you liked what you read, don't forget to start [this](https://github.com/birjuvachhani/locus-android) repository. Happy coding!
+If you liked what you read, don't forget to star [this](https://github.com/birjuvachhani/locus-android) repository. Happy coding folks!
