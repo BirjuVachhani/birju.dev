@@ -5,7 +5,7 @@ cover = "assets/images/location-banner.png"
 date = 2019-11-22T13:49:10Z
 draft = true
 tags = ["android", "location", "locus", "library"]
-title = "The Legendary Task of Retrieving Location in 3 lines of code"
+title = "The Legendary Task of Retrieving Location in Just 3 lines of code"
 
 +++
 When it comes to retrieve location in android devices, we see it as a tedious task as it requires a lot of boilerplate code. We need to handle android's permission model for location permission and also we need to keep an eye for device's location settings also.
@@ -221,7 +221,7 @@ The `request{}` block lets you access the `LocationRequest` instance so you can 
 
 Locus requests location updates in such a way that it works by default in background also, but Until Android 10. Android 10 has some major privacy changes for location permissions. Starting from Android 10, Location updates won't be available by default when your app is in background. You can read more about Android 10 Location permission changes [here](https://developer.android.com/about/versions/10/privacy/changes). I won't be going in deep about those changes and how to handle them.
 
-If you have checked the above link, then now you know that you have one extra location permission that needs to be handled for getting background location updates which is `android.permission.ACCESS_BACKGROUND_LOCATION`. Again, this can a tedious task to write all those code to handle background updates for Android 10.
+If you have gone through above link, then now you might know that you have one extra location permission that needs to be handled for getting background location updates which is `android.permission.ACCESS_BACKGROUND_LOCATION`. Again, this can a tedious task to write all those code to handle background updates for Android 10.
 
 Luckily Locus supports that out of the box! Yes, you read that right! Background location updates are off by default, which means that Locus won't ask for `android.permission.ACCESS_BACKGROUND_LOCATION` when running on Android 10. So, if you want to get location updates in background also, you can do it very easily:
 
