@@ -5,7 +5,7 @@ cover = "assets/images/location-banner.png"
 date = 2019-11-22T13:49:10Z
 draft = true
 tags = ["android", "location", "locus", "library"]
-title = "Retrieve Location with Just 3 Lines of Code - Android "
+title = "The Legendary Task of Retrieving Location in 3 lines of code - Android"
 
 +++
 When it comes to retrieve location in android devices, we see it as a tedious task as it requires a lot of boilerplate code. We need to handle android's permission model for location permission and also we need to keep an eye for device's location settings also.
