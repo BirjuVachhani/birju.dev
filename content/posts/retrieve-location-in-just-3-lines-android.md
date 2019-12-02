@@ -103,6 +103,25 @@ Stopping location updates is quite easy and clean:
 Locus.stopLocationUpdates()
 ```
 
+## Handling Denials
+
+Locus notifies you when a user denies location access or location settings resolution. When you receive error from locus, the error object can be used to check for these denials
+
+```kotlin
+Locus.startLocationUpdates(this) { result ->
+    result.location?.let { /* Received location update */ }
+    result.error?.let { error ->
+        when {
+            error.isDenied -> { /* When permission is denied */ }
+            error.isPermanentlyDenied -> { /* When permission is permanently denied */ }
+            error.isSettingsResolutionFailed -> { /* When location settings resolution is failed */ }
+            error.isSettingsDenied -> { /* When user denies to allow required location settings */ }
+            error.isFatal -> { /* None of above */ }
+        }
+    }
+}
+```
+
 ## Configure Locus
 
 Locus is highly customisable and lets you customise the default options in very easy way.
