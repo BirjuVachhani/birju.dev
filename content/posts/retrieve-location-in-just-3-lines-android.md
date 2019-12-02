@@ -14,11 +14,11 @@ When it comes to retrieve location in android devices, we see it as a tedious ta
 
 Let's face it! For privacy and security reasons, these kind of restrictions are much needed but as per the developer's point of view, it is very annoying to handle location permissions to access device location as it adds a lot of boilerplate code and it also needs to be handled properly otherwise you're more likely to end up in a dirty state. Once you get location permissions which is in most cases `android.permission.ACCESS_COARSE_LOCATION` and `android.permission.ACCESS_FINE_LOCATION` but then you realise that you're also targeting _Android 10_. Now you need to handle `android.permission.ACCESS_BACKGROUND_LOCATION` if you want to get location in background also due to security changes in _Android 10_.
 
-That's not enough, now if the GPS is turned off then you won't receive any updates. You'll have to resolve location settings and check if the gps is enabled or not and then you'll need to ask user to turn it on. In case if you want high accurate location, simply turning on GPS won't help. You'll have to request user to allow access for high accurate location which add a lot of boilerplate code.
+That's not enough, now if the device GPS is turned off then you won't receive any updates. You'll have to resolve location settings and check if the GPS is enabled or not and then you'll need to ask user to turn it on. In case if you want high accurate location, simply turning on GPS won't help. You'll have to request user to allow access for high accurate location which add a lot of boilerplate code.
 
 Also, this permission model and location settings resolution gives results as activity results so you'll have to write this all boilerplate code in your `Activity` class. As Android 10 comes into picture, you'll have to handle foreground and background location permissions also. Ahh! Isn't it exhausting?
 
-But what if I tell you that you can retrieve location in just 3 lines of code without any of this hassle? Wouldn't it be great not to write all those boilerplate code? Hell, it will be great!
+What if I tell you that you can retrieve location in just 3 lines of code without any of this hassle? Wouldn't it be great not to write all those boilerplate code? Hell, it will be great!
 
 ## Locus
 
