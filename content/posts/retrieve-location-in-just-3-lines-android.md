@@ -39,7 +39,7 @@ Locus has features that you haven't even imagined yet.
 
 Locus is built using Kotlin DSL which makes it so beautiful to write and customise easily. Also, Locus uses `LiveData` internally to make it lifecycle aware so you don't have to worry about your Activity/Fragment lifecycle anymore.
 
-Locus has built in support for Android 10 location permission changes and handles location for both foreground and background access. It also supports the famous location resolution process that helps you detect device's GPS settings and lets you ask user to make changes to GPS settings in order to satisfy your needs. Lets get started and add Locus to your Android project
+Locus has built in support for Android 10 location permission changes and handles location for both foreground and background access. It also supports the famous location resolution process that helps you detect device's GPS settings and lets you ask the user to make changes to GPS settings in order to satisfy your needs. Sounds fun? Lets get started and add Locus to your Android project
 
 ## Installation
 
