@@ -6,7 +6,9 @@ theme = "hugo-theme-hello-friend-ng"
 
 # Syntax Highlighting
 PygmentsCodeFences = true
-PygmentsStyle = "solarized-dark256"
+# PygmentsUseClasses=true
+PygmentsStyle = "native"
+# Available styles: https://xyproto.github.io/splash/docs/longer/all.html
 
 rssLimit  = 10  # Maximum number of items in the RSS feed.
 # copyright = "2019 (c) Birju Vachhani"
@@ -73,7 +75,7 @@ disableHugoGeneratorInject = false
     theme = "#252627"
 
   [params.logo]
-    logoText     = "$ birju.vachhani"
+    logoText     = "$ birjuvachhani"
     logoHomeLink = "/"
   #   # Set to a valid CSS color to change the cursor in the logo.
     logoColor    = "#ff4433"
@@ -112,11 +114,11 @@ disableHugoGeneratorInject = false
     identifier = "tags"
     name       = "Tags"
     url        = "tags/"
-  [[menu.main]]
-    identifier = "categories"
-    name       = "Categories"
-    url        = "categories/"
-  [[menu.main]]
-    identifier = "projects"
-    name       = "Projects"
-    url        = "projects/"
+  # [[menu.main]]
+  #   identifier = "categories"
+  #   name       = "Categories"
+  #   url        = "categories/"
+  # [[menu.main]]
+  #   identifier = "projects"
+  #   name       = "Projects"
+  #   url        = "projects/"
