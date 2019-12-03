@@ -253,7 +253,26 @@ Locus.setLogging(true)
 
 ### Theming Dialogs
 
-// TODO
+This all wasn't enough! Locus also supports Light and dark themes for alert dialogs that you can configure according to your need.
+
+#### Change Theme
+
+The default theme is light. You can easily change it to android's default dark one. Add this line to your `styles.xml` file:
+
+```xml
+<style name="LocusTheme" parent="LocusTheme.Dark" />
+```
+
+#### Change Accent Color
+
+Locus uses default alert dialogs so changing action button color is quite easy and handy.
+
+```xml
+<style name="LocusTheme" parent="LocusTheme.Dark">
+    <item name="colorAccent">@android:color/holo_blue_dark</item>
+</style>
+```
+
 
 ## Conclusion
 
