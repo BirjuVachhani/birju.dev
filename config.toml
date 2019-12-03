@@ -75,7 +75,7 @@ disableHugoGeneratorInject = false
     theme = "#252627"
 
   [params.logo]
-    logoText     = "$ birjuvachhani"
+    logoText     = "$ birju_vachhani"
     logoHomeLink = "/"
   #   # Set to a valid CSS color to change the cursor in the logo.
     logoColor    = "#ff4433"
