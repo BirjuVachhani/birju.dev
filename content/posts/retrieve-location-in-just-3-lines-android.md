@@ -273,6 +273,7 @@ Locus uses default alert dialogs so changing action button color is quite easy a
 </style>
 ```
 
+However, custom alert dialogs are not supported yet but I planning to add that feature where you can display your custom dialogs or screen for user informative actions like rationale, open settings dialog and location settings resolution dialog.
 
 ## Conclusion
 
