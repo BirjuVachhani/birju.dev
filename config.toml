@@ -85,9 +85,9 @@ disableHugoGeneratorInject = false
     name = "twitter"
     url  = "https://twitter.com/birjuvachhani"
 
-  [[params.social]]
-    name = "email"
-    url  = "mailto:brvachhani@gmail.com"
+  # [[params.social]]
+  #   name = "email"
+  #   url  = "mailto:brvachhani@gmail.com"
 
   [[params.social]]
     name = "github"
@@ -100,6 +100,15 @@ disableHugoGeneratorInject = false
   [[params.social]]
     name = "stackoverflow"
     url  = "https://stackoverflow.com/users/9199362/birju-vachhani"
+  [[params.social]]
+    name = "instagram"
+    url  = "https://instagram.com/birjuvachhani"
+  [[params.social]]
+    name = "medium"
+    url  = "https://instagram.com/birjuvachhani"
+  [[params.social]]
+    name = "speakerdeck"
+    url  = "https://speakerdeck.com/birjuvachhani"
 
 [menu]
   [[menu.main]]
