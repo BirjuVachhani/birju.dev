@@ -1,8 +1,8 @@
 +++
 author = "Birju Vachhani"
 categories = ["Android"]
-cover = ""
-date = 2019-12-09T16:56:48Z
+cover = "/assets/images/locus.png"
+date = 2018-06-02T16:56:48Z
 draft = true
 tags = ["android"]
 title = "LuminAID"
