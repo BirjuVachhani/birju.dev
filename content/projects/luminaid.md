@@ -1,7 +1,7 @@
 +++
 author = "Birju Vachhani"
 categories = ["Android"]
-cover = "/assets/images/LuminAID.png"
+cover = "/assets/images/luminaid-banner.png"
 date = 2018-06-02T16:56:48Z
 draft = true
 tags = ["android"]
