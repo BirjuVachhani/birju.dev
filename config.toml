@@ -127,7 +127,7 @@ disableHugoGeneratorInject = false
   #   identifier = "categories"
   #   name       = "Categories"
   #   url        = "categories/"
-  # [[menu.main]]
-  #   identifier = "projects"
-  #   name       = "Projects"
-  #   url        = "projects/"
+  [[menu.main]]
+    identifier = "projects"
+    name       = "Projects"
+    url        = "projects/"
