@@ -48,6 +48,7 @@ fields:
     - Wordpress
   label: Category
 pages:
+- content/projects/luminaid.md
 - content/posts/retrieve-location-in-just-3-lines-android.md
 - content/posts/a-better-way-to-manage-gradle-build-script.md
 - content/posts/android-auto-sizing-text-view.md
