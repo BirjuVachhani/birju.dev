@@ -1,7 +1,7 @@
 ---
 title: RecyclerView Data Binding
 author: Birju Vachhani
-date: 2019-11-26T00:00:00+05:30
+date: 2018-05-22
 toc: false
 images: 
 tags:
