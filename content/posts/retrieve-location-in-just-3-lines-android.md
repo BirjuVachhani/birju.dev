@@ -2,7 +2,7 @@
 author = "Birju Vachhani"
 categories = ["Android"]
 cover = "assets/images/location-banner.png"
-date = 2019-11-22T13:49:10Z
+date = 2019-12-10T11:30:10Z
 draft = false
 tags = ["android", "location", "locus", "library"]
 title = "The Legendary Task of Retrieving Location in Just 3 lines of code"
