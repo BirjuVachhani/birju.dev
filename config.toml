@@ -13,7 +13,7 @@ PygmentsStyle = "native"
 rssLimit  = 10  # Maximum number of items in the RSS feed.
 # copyright = "2019 (c) Birju Vachhani"
 
-# googleAnalytics = ""
+googleAnalytics = "UA-154345231-1"
 # disqusShortname = ""
 
 # Project Structure
