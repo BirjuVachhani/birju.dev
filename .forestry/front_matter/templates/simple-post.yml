@@ -48,15 +48,16 @@ fields:
     - Wordpress
   label: Category
 pages:
-- content/projects/luminaid.md
-- content/posts/retrieve-location-in-just-3-lines-android.md
 - content/posts/a-better-way-to-manage-gradle-build-script.md
 - content/posts/android-auto-sizing-text-view.md
+- content/posts/android-recycler-view-data-binding.md
+- content/posts/early-introduction-of-viewpager2.md
 - content/posts/getting-started-with-jenkins-android.md
 - content/posts/how-to-start-a-self-hosted-blog.md
 - content/posts/jetpack-compose-columns.md
 - content/posts/listadapter-a-recyclerview-adapter-extension.md
 - content/posts/migrating-gradle-build-scripts-to-kotlin-dsl.md
+- content/posts/publish-your-flutter-package-using-github-actions.md
+- content/posts/retrieve-location-in-just-3-lines-android.md
 - content/posts/what-s-new-in-android-architecture-components-google-i-o-19.md
-- content/posts/early-introduction-of-viewpager2.md
-- content/posts/android-recycler-view-data-binding.md
+- content/projects/luminaid.md
