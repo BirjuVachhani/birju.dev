@@ -24,15 +24,59 @@ Here's what we are going to do in order to achieve what we want.
 ## Steps
 
 1. Retrieve Login Credentials for pub.dev
-2. Write a shell script to set credentials
-3. Create Secrets on GitHub
+2. Create Secrets on GitHub
+3. Write a shell script to set credentials
 4. Create a workflow for GitHub Action to publish a package.
 5. Triggering Builds.
 
-I did some research on how `pub publish` command works. When we run this command in our terminal for the first time, `pub` would ask us to log in to our pub.dev account by opening the URL printed on the command line. Once we log in using that URL, `pub` store some login credentials(which happens to be some tokens) into a file at `~/.pub-cache/credentials.json`. 
+I did some research on how `pub publish` command works. When we run this command in our terminal for the first time, `pub` would ask us to log in to our pub.dev account by opening the URL printed on the command line. Once we log in using that URL, `pub` store some login credentials(which happens to be some tokens) into a file called `credentials.json`.
 
-Next time when you run `pub publish` command, it checks for this file and proceeds further without asking for login again. This gave me a hint that to make it work on CI-CD servers, we need to create this file somehow on the build machine. 
+Next time when you run `pub publish` command, it checks for this file and proceeds further without asking for login again. This gave me a hint that to make it work on CI-CD servers, we need to create this file somehow on the build machine.
 
 Follow this easy guide to setup your GitHub actions to publish your packages.
 
 ## 1. Retrieve Login Credentials for pub.dev
+
+Alright, we need some credentials to log in to pub.dev via the command line. Here's how it looks like:
+
+```json
+{
+  "accessToken": "<YOUR_ACCESS_TOKEN>",
+  "refreshToken": "<YOUR_REFRESH_TOKEN>",
+  "tokenEndpoint": "https://accounts.google.com/o/oauth2/token",
+  "scopes": [
+    "openid",
+    "https://www.googleapis.com/auth/userinfo.email"
+  ],
+  "expiration": 1583046238465
+}
+```
+
+If you have already published your package before, you can easily find the required credentials for pub.dev as you already have logged into your account. You can locate the file at following path:
+
+##### Linux/Mac-OS
+
+```
+~/.pub-cache/credentials.json
+```
+
+##### Windows
+
+```
+C:\Users\<USER>\AppData\Roaming\Pub\Cache\credentials.json
+```
+
+But if you're doing this for the first time and you haven't made any releases of your package on pub.dev, these credentials won't be there!
+
+Here's a workaround to get these credentials.
+
+Run the following command:
+
+> Note: Run this command only if this is your first release.
+
+```shell
+flutter pub uploader add <YOUR_EMAIL_HERE>
+```
+
+This will ask you to login to your pub.dev account. Do so by opening the link provided in the terminal. Once you log in successfully, you will be able to locate the `credentials.json` file.
+
