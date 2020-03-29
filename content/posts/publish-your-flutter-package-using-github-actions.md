@@ -153,6 +153,9 @@ Finally, we now need to create a workflow for our publishing process. Open your 
 
 Here's the workflow for your dart package:
 
+
+##### Dart workflow
+
 ```yaml
 name: Publish Package
 
@@ -190,6 +193,8 @@ jobs:
 
 Use this workflow only if your package is a dart package, not a flutter package. For Flutter packages, use following workflow:
 
+
+##### Flutter workflow
 ```yaml
 jobs:
   build:
@@ -221,3 +226,5 @@ jobs:
       - name: Publish Package
         run: pub publish -f
 ```
+
+Let's talk about dart workflow first
