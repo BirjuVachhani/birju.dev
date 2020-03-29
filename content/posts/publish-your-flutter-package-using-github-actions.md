@@ -139,5 +139,10 @@ cat <<EOF > ~/.pub-cache/credentials.json
   "expiration":${PUB_DEV_PUBLISH_EXPIRATION}
 }
 EOF
-
 ```
+
+The `if` conditions in the script check whether the secrets are available as environment variables or not and raises an error if not. The `cat` command finally creates and writes `credentials.json` at `~/.pub-cache/credentials.json`. We are going to use the ubuntu image for our workflow so that explains the path for credentials file.
+
+Ideally, you don't need to make any changes to this script and you can reuse it directly for any other projects. But If you chose to use different names for secrets earlier then, you'll have to use those same names here.
+
+Commit this file to your repository and push it to the master branch. We'll need this file when we run our workflow for GitHub actions.
