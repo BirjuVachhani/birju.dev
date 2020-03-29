@@ -5,31 +5,31 @@ cover = ""
 date = 2020-03-28T13:51:26Z
 draft = true
 tags = ["flutter", "github-actions", "dart", "flutter-package", "dart-package"]
-title = "Publish Your Flutter Package using GitHub Actions"
+title = "Publish Your Flutter/Dart Package using GitHub Actions"
 
 +++
-Howdy people! Recently I was exploring the internet to get some guidance on publishing Flutter or Dart packages to [pub.dev](https://pub.dev "Pub Dev") via CI-CD servers. My primary goal was to use GitHub Actions to do so. Unfortunately, I failed to get proper information on how can I achieve that. Then I decided to go by myself and I struggled a lot to get it working properly. So, I decided to write this easy and step-by-step guide to help others like me out there!
+Howdy people! Recently I was exploring the internet to get some guidance on publishing [Flutter](https://flutter.dev/) or [Dart](https://dart.dev/) packages to [pub.dev](https://pub.dev "Pub Dev") via CI-CD servers. My primary goal was to use [GitHub Actions](https://github.com/features/actions) to do so. Unfortunately, I failed to get proper information on how can I achieve that. Then I decided to go by myself and I struggled a lot to get it working properly. So, I decided to write this easy and step-by-step guide to help others like me out there!
 
-Here's what we're trying to achieve: We have a flutter/dart package that we want to publish on [pub.dev](https://pub.dev "Pub Dev") whenever we create a new release on GitHub or push code to the master branch. Sounds easy? Let me tell you, it wasn't. Here's what we're going to need.
+Here's what we're trying to achieve: We have a [Flutter](https://flutter.dev/)/[Dart](https://dart.dev/) package that we want to publish on [pub.dev](https://pub.dev "Pub Dev") whenever we create a new release on [GitHub](https://github.com) or push code to the master branch. Sounds easy? Let me tell you, it wasn't. Here's what we're going to need.
 
 ## Requirements
 
-1. A flutter package ready to be published.
-2. An active account on pub.dev
-3. A repository on GitHub with admin access.
+1. A Flutter package ready to be published.
+2. An active account on [pub.dev](https://pub.dev)
+3. A repository on [GitHub](https://github.com) with admin access.
 4. A working laptop, internet connection, and some patience!
 
 Here's what we are going to do in order to achieve what we want.
 
 ## Steps
 
-1. Retrieve Login Credentials for pub.dev
-2. Create Secrets on GitHub
+1. Retrieve Login Credentials for [pub.dev](https://pub.dev)
+2. Create Secrets on [GitHub](https://github.com)
 3. Write a shell script to set credentials
 4. Create a workflow for GitHub Action to publish a package.
 5. Triggering Builds.
 
-I did some research on how `pub publish` command works. When we run this command in our terminal for the first time, `pub` would ask us to log in to our pub.dev account by opening the URL printed on the command line. Once we log in using that URL, `pub` store some login credentials(which happens to be some tokens) into a file called `credentials.json`.
+I did some research on how `pub publish` command works. When we run this command in our terminal for the first time, `pub` would ask us to log in to our [pub.dev](https://pub.dev "Pub Dev") account by opening the URL printed on the command line. Once we log in using that URL, `pub` store some login credentials(which happens to be some tokens) into a file called `credentials.json`.
 
 Next time when you run `pub publish` command, it checks for this file and proceeds further without asking for login again. This gave me a hint that to make it work on CI-CD servers, we need to create this file somehow on the build machine.
 
@@ -37,7 +37,7 @@ Follow this easy guide to setup your GitHub actions to publish your packages.
 
 ## 1. Retrieve Login Credentials for pub.dev
 
-Alright, we need some credentials to log in to pub.dev via the command line. Here's how it looks like:
+Alright, we need some credentials to log in to [pub.dev](https://pub.dev "Pub Dev") via the command line. Here's how it looks like:
 
 ```json
 {
@@ -52,7 +52,7 @@ Alright, we need some credentials to log in to pub.dev via the command line. Her
 }
 ```
 
-If you have already published your package before, you can easily find the required credentials for pub.dev as you already have logged into your account. You can locate the file at following path:
+If you have already published your package before, you can easily find the required credentials for [pub.dev](https://pub.dev "Pub Dev") as you already have logged into your account. You can locate the file at following path:
 
 ##### Linux/Mac-OS
 
@@ -62,7 +62,7 @@ If you have already published your package before, you can easily find the requi
 
     C:\Users\<USER>\AppData\Roaming\Pub\Cache\credentials.json
 
-But if you're doing this for the first time and you haven't made any releases of your package on pub.dev, these credentials won't be there!
+But if you're doing this for the first time and you haven't made any releases of your package on [pub.dev](https://pub.dev "Pub Dev"), these credentials won't be there!
 
 Here's a workaround to get these credentials.
 
@@ -74,7 +74,7 @@ Run the following command:
 flutter pub uploader add <YOUR_EMAIL_HERE>
 ```
 
-This will ask you to log in to your pub.dev account. Do so by opening the link provided in the terminal. Once you log in successfully, you will be able to locate the `credentials.json` file. Keep this file handy. We'll need it in the next step.
+This will ask you to log in to your [pub.dev](https://pub.dev "Pub Dev") account. Do so by opening the link provided in the terminal. Once you log in successfully, you will be able to locate the `credentials.json` file. Keep this file handy. We'll need it in the next step.
 
 ## 2. Create Secrets on GitHub
 
@@ -242,7 +242,7 @@ on:
 1. We're using `ubuntu-latest` as OS for our CI server. It makes it easy to run shell scripts.
 2. Notice the `Setup Pub Credentials` step which sets environment variables for our little shell script and then runs our script stored in `pub_login.sh` file.
 3. `Check Publish Warnings` step ensures that there's no error publishing your package by running `pub publish --dry-run` command.
-4. `Publish Package` step will publish your package to pub.dev
+4. `Publish Package` step will publish your package to [pub.dev](https://pub.dev "Pub Dev")
 
 #### Dart Workflow:
 
@@ -258,4 +258,6 @@ Save your workflow file and push it to the master branch on your GitHub reposito
 
 ## 5. Triggering Builds
 
-That's it! All the setup is done. Now all you need to do is trigger a build. Triggering a build depends on how did you set up the workflow like `on pull_request`, `on push` or `on release`. Once that event happens, it will trigger a build and if everything goes right, your package will be published to pub.dev.
+That's it! All the setup is done. Now all you need to do is trigger a build. Triggering a build depends on how did you set up the workflow like `on pull_request`, `on push` or `on release`. Once that event happens, it will trigger a build and if everything goes right, your package will be published to [pub.dev](https://pub.dev "Pub Dev").
+
+Thanks for reading! If you liked what you read or learnt, don't forget to share! Happy coding folks!
