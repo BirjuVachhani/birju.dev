@@ -56,15 +56,11 @@ If you have already published your package before, you can easily find the requi
 
 ##### Linux/Mac-OS
 
-```
-~/.pub-cache/credentials.json
-```
+    ~/.pub-cache/credentials.json
 
 ##### Windows
 
-```
-C:\Users\<USER>\AppData\Roaming\Pub\Cache\credentials.json
-```
+    C:\Users\<USER>\AppData\Roaming\Pub\Cache\credentials.json
 
 But if you're doing this for the first time and you haven't made any releases of your package on pub.dev, these credentials won't be there!
 
@@ -78,5 +74,23 @@ Run the following command:
 flutter pub uploader add <YOUR_EMAIL_HERE>
 ```
 
-This will ask you to login to your pub.dev account. Do so by opening the link provided in the terminal. Once you log in successfully, you will be able to locate the `credentials.json` file.
+This will ask you to log in to your pub.dev account. Do so by opening the link provided in the terminal. Once you log in successfully, you will be able to locate the `credentials.json` file. Keep this file handy. We'll need it in the next step.
 
+## 2. Create Secrets on GitHub
+
+Now, that we have login credentials, we'll need it in our GitHub Action. We could use these tokens directly into our workflow file but it's a Bad Idea to expose sensitive information like this on your repository. So, we're going to use GitHub secrets to store this information on a repository level. That way, it is only accessible by the admin of the repository and we can access those secrets in our workflow file. 
+
+Setting secrets for your repository is quite easy. Head over to GitHub and open your repository settings (assuming you already have your repository set up). There, you'll find the secrets section. 
+
+{{< figure src="/assets/images/github_secrets.png" alt="GitHub Secrets" caption="GitHub Secrets" >}}
+
+Click on `Add a new secret` button to add a secret. Here's all the secret that we're going to need.
+
+#### Secrets
+
+* PUB_DEV_PUBLISH_ACCESS_TOKEN
+* PUB_DEV_PUBLISH_REFRESH_TOKEN
+* PUB_DEV_PUBLISH_TOKEN_ENDPOINT
+* PUB_DEV_PUBLISH_EXPIRATION
+
+> Use these exact same names to create your secrets because these names will be used in our workflow file as well. If you wish to change the names, then make sure you use the same names everywhere.
