@@ -149,12 +149,11 @@ Commit this file to your repository and push it to the master branch. We'll need
 
 ## 4. Create a workflow for GitHub Action to publish a package
 
-Finally, we now need to create a workflow for our publishing process. Open your repository and create this file `.github\workflows\publish.yml`. 
+Finally, we now need to create a workflow for our publishing process. Open your repository and create this file `.github\workflows\publish.yml`.
 
 Here's the workflow for your dart package:
 
-
-##### Dart workflow
+#### Dart workflow
 
 ```yaml
 name: Publish Package
@@ -188,13 +187,12 @@ jobs:
         run: pub publish --dry-run
       - name: Publish Package
         run: pub publish -f
-
 ```
 
 Use this workflow only if your package is a dart package, not a flutter package. For Flutter packages, use following workflow:
 
+#### Flutter workflow
 
-##### Flutter workflow
 ```yaml
 jobs:
   build:
@@ -202,14 +200,14 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-      - uses: actions/setup-java@v1
-        with:
-          java-version: '8.x'
-      - uses: subosito/flutter-action@v1
+      - name: Install Flutter
+        uses: subosito/flutter-action@v1
         with:
           flutter-version: '1.9.1+hotfix.6'
       - name: Install dependencies
         run: flutter pub get
+      - name: Analyze
+        run: flutter analyze
       - name: Run tests
         run: flutter test
       - name: Setup Pub Credentials
@@ -227,4 +225,37 @@ jobs:
         run: pub publish -f
 ```
 
-Let's talk about dart workflow first
+Let's talk about the common part first.
+
+1. `on:` defines when to run the workflow. I want my workflow to run when I create a new release on GitHub. You can set it according to your requirements. Here's an example:
+
+```yaml
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
+```
+
+1. We're using `ubuntu-latest` as OS for our CI server. It makes it easy to run shell scripts.
+2. Notice the `Setup Pub Credentials` step which sets environment variables for our little shell script and then runs our script stored in `pub_login.sh` file.
+3. `Check Publish Warnings` step ensures that there's no error publishing your package by running `pub publish --dry-run` command.
+4. `Publish Package` step will publish your package to pub.dev
+
+#### Dart Workflow:
+
+* `google/dart:latest` container image will provide us with lastest dart installation.
+* For a dart package, we use `pub` commands to install dependencies and run tests before proceeding for the publishing process.
+
+#### Flutter Workflow:
+
+* Step `Install Flutter` will install Flutter SDK with given `flutter-version`. Feel free to use the latest version or the one that suits you.
+* For a Flutter package, we'll use `flutter` commands instead of `pub` commands to install dependencies, run tests and, analyze the source code.
+
+Save your workflow file and push it to the master branch on your GitHub repository.
+
+## 5. Triggering Builds
+
+That's it! All the setup is done. Now all you need to do is trigger a build. Triggering a build depends on how did you set up the workflow like `on pull_request`, `on push` or `on release`. Once that event happens, it will trigger a build and if everything goes right, your package will be published to pub.dev.
