@@ -146,3 +146,46 @@ The `if` conditions in the script check whether the secrets are available as env
 Ideally, you don't need to make any changes to this script and you can reuse it directly for any other projects. But If you chose to use different names for secrets earlier then, you'll have to use those same names here.
 
 Commit this file to your repository and push it to the master branch. We'll need this file when we run our workflow for GitHub actions.
+
+## 4. Create a workflow for GitHub Action to publish a package
+
+Finally, we now need to create a workflow for our publishing process. Open your repository and create this file `.github\workflows\publish.yml`. 
+
+Here's the workflow for your dart package:
+
+```yaml
+name: Publish Package
+
+on:
+  release:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    container:
+      image:  google/dart:latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: pub get
+      - name: Run tests
+        run: pub run test
+      - name: Build & Install Locally
+        run: pub global activate --source path .
+      - name: Setup Pub Credentials
+        shell: bash
+        env:
+          PUB_DEV_PUBLISH_ACCESS_TOKEN: ${{ secrets.PUB_DEV_PUBLISH_ACCESS_TOKEN }}
+          PUB_DEV_PUBLISH_REFRESH_TOKEN: ${{ secrets.PUB_DEV_PUBLISH_REFRESH_TOKEN }}
+          PUB_DEV_PUBLISH_TOKEN_ENDPOINT: ${{ secrets.PUB_DEV_PUBLISH_TOKEN_ENDPOINT }}
+          PUB_DEV_PUBLISH_EXPIRATION: ${{ secrets.PUB_DEV_PUBLISH_EXPIRATION }}
+        run: |
+          sh ./pub_login.sh
+      - name: Check Publish Warnings
+        run: pub publish --dry-run
+      - name: Publish Package
+        run: pub publish -f
+
+```
