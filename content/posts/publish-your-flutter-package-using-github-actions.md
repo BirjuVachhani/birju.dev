@@ -78,9 +78,9 @@ This will ask you to log in to your pub.dev account. Do so by opening the link p
 
 ## 2. Create Secrets on GitHub
 
-Now, that we have login credentials, we'll need it in our GitHub Action. We could use these tokens directly into our workflow file but it's a Bad Idea to expose sensitive information like this on your repository. So, we're going to use GitHub secrets to store this information on a repository level. That way, it is only accessible by the admin of the repository and we can access those secrets in our workflow file. 
+Now, that we have login credentials, we'll need it in our GitHub Action. We could use these tokens directly into our workflow file but it's a Bad Idea to expose sensitive information like this on your repository. So, we're going to use GitHub secrets to store this information on a repository level. That way, it is only accessible by the admin of the repository and we can access those secrets in our workflow file.
 
-Setting secrets for your repository is quite easy. Head over to GitHub and open your repository settings (assuming you already have your repository set up). There, you'll find the secrets section. 
+Setting secrets for your repository is quite easy. Head over to GitHub and open your repository settings (assuming you already have your repository set up). There, you'll find the secrets section.
 
 {{< figure src="/assets/images/github_secrets.png" alt="GitHub Secrets" caption="GitHub Secrets" >}}
 
@@ -94,3 +94,50 @@ Click on `Add a new secret` button to add a secret. Here's all the secret that w
 * PUB_DEV_PUBLISH_EXPIRATION
 
 > Use these exact same names to create your secrets because these names will be used in our workflow file as well. If you wish to change the names, then make sure you use the same names everywhere.
+
+The names self-explanatory to indicate which information from the `credentials.json` file to set for each secret.
+
+## 3. Write a shell script to set credentials
+
+Alright! Now that we have set up secrets on GitHub, we can use them in our workflow file. But before that, we need to create `credentials.json` file on the CI server in order for pub to log in. We're going to do this using a shell script. Now, we could do this by writing the whole script in our workflow file but that is kind of messy. So, we're going to keep that shell script in a file in our repository and we'll invoke it from our workflow file. This way you can reuse the script for other projects and it won't make your workflow file look messy.
+
+Create a file in the root of your repository with the name `pub_login.sh`. Here's the script that we're going to put in that file.
+
+```shell
+# This script creates/updates credentials.json file which is used
+# to authorize publisher when publishing packages to pub.dev
+
+# Checking whether the secrets are available as environment
+# variables or not.
+if [ -z "${PUB_DEV_PUBLISH_ACCESS_TOKEN}" ]; then
+  echo "Missing PUB_DEV_PUBLISH_ACCESS_TOKEN environment variable"
+  exit 1
+fi
+
+if [ -z "${PUB_DEV_PUBLISH_REFRESH_TOKEN}" ]; then
+  echo "Missing PUB_DEV_PUBLISH_REFRESH_TOKEN environment variable"
+  exit 1
+fi
+
+if [ -z "${PUB_DEV_PUBLISH_TOKEN_ENDPOINT}" ]; then
+  echo "Missing PUB_DEV_PUBLISH_TOKEN_ENDPOINT environment variable"
+  exit 1
+fi
+
+if [ -z "${PUB_DEV_PUBLISH_EXPIRATION}" ]; then
+  echo "Missing PUB_DEV_PUBLISH_EXPIRATION environment variable"
+  exit 1
+fi
+
+# Create credentials.json file.
+cat <<EOF > ~/.pub-cache/credentials.json
+{
+  "accessToken":"${PUB_DEV_PUBLISH_ACCESS_TOKEN}",
+  "refreshToken":"${PUB_DEV_PUBLISH_REFRESH_TOKEN}",
+  "tokenEndpoint":"${PUB_DEV_PUBLISH_TOKEN_ENDPOINT}",
+  "scopes":["https://www.googleapis.com/auth/userinfo.email","openid"],
+  "expiration":${PUB_DEV_PUBLISH_EXPIRATION}
+}
+EOF
+
+```
