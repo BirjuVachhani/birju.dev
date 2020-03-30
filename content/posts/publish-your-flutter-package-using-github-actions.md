@@ -37,7 +37,7 @@ Follow this easy guide to setup your **GitHub actions** to publish your packages
 
 ## 1. Retrieve Login Credentials for pub.dev
 
-Alright, we need some credentials to log in to [pub.dev](https://pub.dev "Pub Dev") via the command line. Here's how it looks like:
+Alright, we need some credentials to log in to [pub.dev](https://pub.dev "Pub Dev") via the command line. Here's what it looks like:
 
 ```json
 {
