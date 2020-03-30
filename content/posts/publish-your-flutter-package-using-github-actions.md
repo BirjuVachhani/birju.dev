@@ -10,7 +10,7 @@ title = "Publish Your Flutter/Dart Package using GitHub Actions"
 +++
 **Howdy people!** Recently I was exploring the internet to get some guidance on publishing [Flutter](https://flutter.dev/) or [Dart](https://dart.dev/) packages to [pub.dev](https://pub.dev "Pub Dev") via **CI-CD** servers. My primary goal was to use [GitHub Actions](https://github.com/features/actions) to do so. Unfortunately, I failed to get proper information on how can I achieve that. Then I decided to go by myself and I struggled a lot to get it working properly. So, I decided to write this **easy** and **step-by-step** guide to help others like me out there!
 
-Here's what we're trying to achieve: We have a [Flutter](https://flutter.dev/)/[Dart](https://dart.dev/) package that we want to **publish** on [pub.dev](https://pub.dev "Pub Dev") whenever we create a new release on [GitHub](https://github.com) or push code to the master branch. Sounds easy? Let me tell you, it wasn't. Here's what we're going to need.
+Here's what we're trying to achieve: We have a [Flutter](https://flutter.dev/)/[Dart](https://dart.dev/) package that we want to **publish** on [pub.dev](https://pub.dev "Pub Dev") whenever we create a new release on [GitHub](https://github.com) or push code to the master branch. Here's what we're going to need.
 
 ## Requirements
 
@@ -99,7 +99,7 @@ The names self-explanatory to indicate which information from the `credentials.j
 
 ## 3. Write a shell script to set credentials
 
-Alright! Now that we have set up secrets on **GitHub**, we can use them in our **workflow** file. But before that, we need to create `credentials.json` file on the CI server in order for **pub** to log in. We're going to do this using a shell script. 
+Alright! Now that we have set up secrets on **GitHub**, we can use them in our **workflow** file. But before that, we need to create `credentials.json` file on the CI server in order for **pub** to log in. We're going to do this using a shell script.
 
 Now, we could do this by writing the whole script in our **workflow** file but that is kind of **messy**. So, we're going to keep that shell script in a file in our repository and we'll invoke it from our **workflow** file. This way you can reuse the script for **other projects** and it won't make your **workflow** file look messy.
 
