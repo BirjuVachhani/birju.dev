@@ -8,7 +8,7 @@ tags = ["flutter", "github-actions", "dart", "flutter-package", "dart-package"]
 title = "Publish Your Flutter/Dart Package using GitHub Actions"
 
 +++
-**Howdy people!** Recently I was exploring the internet to get some guidance on publishing [Flutter](https://flutter.dev/) or [Dart](https://dart.dev/) packages to [pub.dev](https://pub.dev "Pub Dev") via **CI-CD** servers. My primary goal was to use [GitHub Actions](https://github.com/features/actions) to do so. Unfortunately, I failed to get proper information on how can I achieve that. Then I decided to go by myself and I struggled a lot to get it working properly. So, I decided to write this **easy** and **step-by-step** guide to help others like me out there!
+**Howdy people!** Recently I was exploring the internet to get some guidance on publishing [Flutter](https://flutter.dev/) or [Dart](https://dart.dev/) packages to [pub.dev](https://pub.dev "Pub Dev") via **CI-CD** servers. My primary goal was to use [GitHub Actions](https://github.com/features/actions) to do so. Unfortunately 😕, I failed to get proper information on how can I achieve that. Then I decided to go by myself and I struggled a lot to get it working properly. So, I decided to write this **easy** and **step-by-step** guide to help others like me out there!
 
 Here's what we're trying to achieve: We have a [Flutter](https://flutter.dev/)/[Dart](https://dart.dev/) package that we want to **publish** on [pub.dev](https://pub.dev "Pub Dev") whenever we create a new release on [GitHub](https://github.com) or push code to the master branch. Here's what we're going to need.
 
@@ -52,7 +52,7 @@ Alright, we need some credentials to log in to [pub.dev](https://pub.dev "Pub De
 }
 ```
 
-If you have already published your package before, you can easily find the required credentials for [pub.dev](https://pub.dev "Pub Dev") as you already have logged into your account. You can locate the file at the following path:
+If you have **already** published your package **before**, you can easily find the required **credentials** for [pub.dev](https://pub.dev "Pub Dev") as you already have logged into your account. You can **locate** the file at the following path:
 
 ##### Linux/Mac-OS
 
@@ -64,17 +64,17 @@ If you have already published your package before, you can easily find the requi
 
 But if you're doing this for the **first time** and you haven't made **any releases** of your package on [pub.dev](https://pub.dev "Pub Dev"), these credentials won't be there!
 
-Here's a workaround to get these credentials.
+Here's a **workaround** to get these **credentials**.
 
 Run the following command:
 
-> Note: Run this command only if this is your **first release**. This is just a trick to get what we need. This command will fail eventually after you login successfully but before that, it will create the credentials file.
+> Note: Run this **command** only if this is your **first release**. This is just a **trick** to get what we need. This command will **fail** eventually after you **login successfully** but before that, it will create the **credentials** file.
 
 ```erlang
 flutter pub uploader add <YOUR_EMAIL_HERE>
 ```
 
-This will ask you to log in to your [pub.dev](https://pub.dev "Pub Dev") account. Do so by opening the link provided in the terminal. Once you log in successfully, you will be able to locate the `credentials.json` file. Keep this file handy. We'll need it in the next step.
+This will ask you to **log in** to your [pub.dev](https://pub.dev "Pub Dev") account. Do so by opening the **link** provided in the **terminal**. Once you log in **successfully**, you will be able to locate the `credentials.json` file. Keep this file handy. We'll need it in the **next step**.
 
 ## 2. Create Secrets on GitHub
 
@@ -256,10 +256,10 @@ on:
 * Step `Install Flutter` will install **Flutter SDK** with given `flutter-version`. Feel free to use the **latest version** or the one that suits you.
 * For a **Flutter package**, we'll use `flutter` commands instead of `pub` commands to **install dependencies**, **run tests** and, **analyze** the source code.
 
-**Save** your workflow file and **push** it to the master branch on your GitHub repository.
+**Save** your workflow file and **push** it to the **master** branch on your GitHub repository.
 
 ## 5. Triggering Builds
 
-That's it! All the setup is done. Now all you need to do is **trigger a build**. Triggering a build depends on how did you set up the **workflow** like `on pull_request`, `on push` or `on release`. Once that event happens, it will trigger a build and if everything goes right, your package will be **published** to [pub.dev](https://pub.dev "Pub Dev").
+That's it! All the setup is done. Now all you need to do is **trigger a build**. Triggering a build depends on how did you set up the **workflow** like `on pull_request`, `on push` or `on release`. Once that event happens, it will trigger a build and if everything goes right🤞, your package will be **published** to [pub.dev](https://pub.dev "Pub Dev").😎
 
-Thanks for reading! If you liked what you read or learned, don't forget to share it! Happy coding folks!
+Thanks for reading! If you liked what you read or learned, don't forget to share it! If you have any questions, feel free to drop a message. Happy coding folks!😊
