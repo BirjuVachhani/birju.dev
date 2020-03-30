@@ -68,7 +68,7 @@ Here's a workaround to get these credentials.
 
 Run the following command:
 
-> Note: Run this command only if this is your **first release**.
+> Note: Run this command only if this is your **first release**. This is just a trick to get what we need. This command will fail eventually after you login successfully but before that, it will create the credentials file. 
 
 ```shell
 flutter pub uploader add <YOUR_EMAIL_HERE>
