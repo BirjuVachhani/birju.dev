@@ -70,7 +70,7 @@ Run the following command:
 
 > Note: Run this command only if this is your **first release**. This is just a trick to get what we need. This command will fail eventually after you login successfully but before that, it will create the credentials file. 
 
-```shell
+```erlang
 flutter pub uploader add <YOUR_EMAIL_HERE>
 ```
 
@@ -78,7 +78,7 @@ This will ask you to log in to your [pub.dev](https://pub.dev "Pub Dev") account
 
 ## 2. Create Secrets on GitHub
 
-Now, that we have **login credentials**, we'll need it in our **GitHub Action**. We could use these tokens directly into our workflow file but it's a Bad Idea to expose **sensitive information** like this on your repository. So, we're going to use **GitHub Secrets** to store this information on a repository level. That way, it is only accessible by the admin of the repository and we can access those secrets in our **workflow** file.
+Now, that we have **login credentials**, we'll need it in our **GitHub Action**. We could use these tokens directly into our workflow file but it's a Bad Idea to expose **sensitive information** like this in your repository. So, we're going to use **GitHub Secrets** to store this information on a repository level. That way, it is only accessible by the **admin** of the repository and we can access those secrets in our **workflow** file.
 
 Setting secrets for your repository is quite easy. Head over to [GitHub ](https://github.com)and open your repository settings (assuming you already have your repository set up). There, you'll find the secrets section.
 
