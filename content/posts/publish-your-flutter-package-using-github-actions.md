@@ -101,7 +101,7 @@ The names self-explanatory to indicate which information from the `credentials.j
 
 Alright! Now that we have set up secrets on **GitHub**, we can use them in our **workflow** file. But before that, we need to create `credentials.json` file on the CI server in order for **pub** to log in. We're going to do this using a shell script.
 
-Now, we could do this by writing the whole script in our **workflow** file but that is kind of **messy**. So, we're going to keep that shell script in a file in our repository and we'll invoke it from our **workflow** file. This way you can reuse the script for **other projects** and it won't make your **workflow** file look messy.
+Now, we could do this by writing the whole script in our **workflow** file itself but that is kind of **messy**. So, we're going to keep that shell script in a file in our repository and we'll invoke it from our **workflow** file. This way you can reuse the script for **other projects** and it will keep your **workflow** file clean.
 
 Create a file in the **root** of your **repository** with the name `pub_login.sh`. Here's the **script** that we're going to put in that file.
 
@@ -145,7 +145,7 @@ EOF
 
 The `if` conditions in the script check whether the secrets are available as **environment variables** or not and **raises an error** if not. The `cat` command finally creates and writes `credentials.json` at `~/.pub-cache/credentials.json`. We are going to use the **ubuntu** image for our **workflow** so that explains the path for credentials file.
 
-Ideally, you don't need to make any changes to this script and you can reuse it directly for any **other projects**. But If you chose to use **different names** for secrets earlier then, you'll have to use those same names here.
+Ideally, you don't need to make any changes to this script and you can reuse it directly for any **other Flutter/Dart projects**. But If you chose to use **different names** for secrets earlier then, you'll have to use those same names here.
 
 **Commit** this file to your **repository** and **push** it to the master branch. We'll need this file when we run our workflow for **GitHub actions**.
 
