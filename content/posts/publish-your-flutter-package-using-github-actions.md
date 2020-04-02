@@ -160,7 +160,7 @@ Here's the workflow for your dart package:
 name: Publish Package
 
 on:
-  release:
+  release: [published]
 
 jobs:
   build:
