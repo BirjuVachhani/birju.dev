@@ -51,6 +51,7 @@ pages:
 - content/posts/a-better-way-to-manage-gradle-build-script.md
 - content/posts/android-auto-sizing-text-view.md
 - content/posts/android-recycler-view-data-binding.md
+- content/posts/burying-the-hatchet-of-build-runner-once-and-for-all.md
 - content/posts/early-introduction-of-viewpager2.md
 - content/posts/getting-started-with-jenkins-android.md
 - content/posts/how-to-start-a-self-hosted-blog.md
