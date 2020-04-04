@@ -116,4 +116,8 @@ You can leave **Working directory** field empty and it will run the command at t
 
 {{< figure src="/assets/images/as_new_external_tool.png" alt="Android Studio: Create External Tool" caption="Android Studio: Create External Tool" >}}
 
-If you select `Make console active on message in stderr` checkbox under **Advanced Options**, it will open the console window running the **build_runner** automatically when it throws an **error**.
+If you select `Make console active on message in stderr` checkbox under **Advanced Options**, it will open the console window running the **build_runner** automatically when it throws an **error**. Once you fill all the required information, save it and exit settings.
+
+We have successfully created our External tool. At this point, the only way you can run this newly created tool is from `Tools>External Tools>tool_name`. where `tool_name` is the name you gave when creating the tool. This will successfully run our build_runner command in a new run window. Go ahead and run it from the UI to make sure it works as intended.
+
+The only step left is to assign a keyboard shortcut for our newly created external tool. To do that, open Preferences again and go to Keymap. 
