@@ -16,9 +16,9 @@ Almost every flutter project uses code generation nowadays. Who wouldn't? No one
 flutter packages run build_runner build --delete-conflicting-outputs
 ```
 
-I don't need to ask whether you're familiar with this command or not as this point. If you're not, you wouldn't be reading this! This is the command that does all the code generation. But I gotta admit that this is very lengthy command to remember! Even if you succeed in that, it's very exhausting to type this command several times a day as being a Flutter developer. I am kind of lazy to do it manually over and over! It kind of feels stupid to me!
+I don't need to ask whether you're familiar with this command or not at this point. If you're not, you wouldn't be reading this! This is the command that does all the code generation. But I gotta admit that this is a very long command to remember! Even if you succeed in that, it's very exhausting to type this command several times a day as being a Flutter developer. I am kind of lazy to do it manually over and over! It kind of feels stupid to me!
 
-That brought me here. It got me thinking of some ways to avoid typing it or remembering it in the first place. You might be thinking that why not use aliases. For a linux or Mac system, it is very easy to set and use aliases. You define a nice little alias for this command and use that instead of typing the whole command.
+That brought me here. It got me thinking of some ways to avoid typing it or remembering it in the first place. You might be thinking that why not use aliases. For a Linux or Mac system, it is very easy to set and use aliases. You define a nice little alias for this command and use that instead of typing the whole command.
 
 ```shell
 alias build_runner='flutter packages run build_runner build --delete-conflicting-outputs'
@@ -26,9 +26,9 @@ alias build_runner='flutter packages run build_runner build --delete-conflicting
 
 Well, it seems better but not the best. First, this is not easy for Windows users. It kind of sucks for them. Second, You still have to type that alias name, right? Open your terminal, type your little alias and hit enter. Well, I am lazier than that, I don't even want to type that!
 
-What if we can use a shorcut to execute `build_runner` commands like we do for running over app in Android Studio. We hit `ctrl + R` on mac and the Android Studio runs our app for us. Isn't it nice? I would very much like it to have similar functionality for `build_runner` commands as well.
+What if we can use a shortcut to execute `build_runner` commands as we do for running our app in Android Studio. We hit `ctrl + R` on mac and the Android Studio runs our app for us. Isn't it nice? I would very much like it to have similar functionality for `build_runner` commands as well.
 
-So, I started digging and found some mojo to make it work same as the run project shortcut works. And that led me to write this article and share that mojo with you guys!
+So, I started digging and found some mojo to make it work the same as the run project shortcut works. And that led me to write this article and share that mojo with you guys! Let's bury the hatchet with build_runner once and for all!
 
 ### What do we want?
 
@@ -130,6 +130,6 @@ Right click on the external tool name and select `add keyboard shortcut`. Add th
 
 That's it! You are all set up. Now you never have to type those commands again! Just use a shortcut and you're good to go!
 
-I have created one command to show you guys how to do it. You can create other combination of build_runner commands for build and watch type of commands with `--delete-conflicting-outputs` flags.
-This solution works for every other Flutter projects.
+I have created one command to show you guys how to do it. You can create other combination of build_runner commands for build and watch type of commands with `--delete-conflicting-outputs` flags. This solution works for every other Flutter project.
 
+Thanks for reading! If you liked what you read, don't forget to share this article as much as you can and help fellow devs. Happy coding folks!
