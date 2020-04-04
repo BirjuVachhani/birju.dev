@@ -8,9 +8,9 @@ tags = ["flutter", "android-studio"]
 title = "Flutter: Burying the Hatchet with Build Runner Once and for All"
 
 +++
-Are you a **Flutter** Developer? Do you use `build_runner` for code generation? Are you tired of typing or remembering the anaconda sized `build_runner` command? Do you want to get rid of that? Then you've come to the right place.
+Are you a [**Flutter**](https://flutter.dev) Developer? Do you use [**build_runner**](https://pub.dev/packages/build_runner) for code generation? Are you tired of typing or remembering the anaconda sized [**build_runner**](https://pub.dev/packages/build_runner) command? Do you want to get rid of that? Then you've come to the right place.
 
-Almost every Flutter project uses **code generation** nowadays. Who wouldn't? No one likes to write **boilerplate** code by themselves. It is exhausting and is kind of stupid at some point. That's why Flutter devs love `build_runner`(Maybe not, I don't know). The power you feel when you make the computer write code itself is incredible, isn't it? But with great power comes great responsibility and it's nothing different with `build_runner`.
+Almost every Flutter project uses **code generation** nowadays. Who wouldn't? No one likes to write **boilerplate** code by themselves. It is exhausting and is kind of stupid at some point. That's why Flutter devs love [**build_runner**](https://pub.dev/packages/build_runner)(Maybe not, I don't know). The power you feel when you make the computer write code itself is incredible, isn't it? But with great power comes great responsibility and it's nothing different with [**build_runner**](https://pub.dev/packages/build_runner).
 
 ```bash
 flutter packages run build_runner build --delete-conflicting-outputs
@@ -32,7 +32,7 @@ So, I started digging and found some **mojo** to make it work the same as the ru
 
 ### What do we want exactly?
 
-We want some **shortcuts** to run `build_runner` commands neatly in our IDE. Whether it be **Android Studio** or **VS Code**. You heard that right! For VS Code as well. **Android Studio** and **VS Code** are the IDEs that are used mostly for Flutter development. So I decided to provide a workaround for both of them. Keep Reading and I'll show you how you can achieve that!
+We want some **shortcuts** to run `build_runner` commands neatly in our IDE. Whether it be [**Android Studio**](https://developer.android.com/studio) or [**VS Code**](https://code.visualstudio.com/). You heard that right! For VS Code as well. [**Android Studio**](https://developer.android.com/studio) and [**VS Code**](https://code.visualstudio.com/) are the IDEs that are used mostly for Flutter development. So I decided to provide a workaround for both of them. Keep Reading and I'll show you how you can achieve that!
 
 ```bash
 # Windows: Ctrl + Alt + G
