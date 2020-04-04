@@ -106,8 +106,14 @@ To open the External Tools window, go to `File>Settings>Tools>External Tools`. F
 
 {{< figure src="/assets/images/as_external_tools.png" alt="Android Studio: External Tools" caption="Android Studio: External Tools" >}}
 
-It will open an dialog to add a new external tool. Select the Flutter executable for your OS from Flutter SDK for program input.
+It will open an dialog to add a new external tool. You can choose a name of your choice. I choose `Build Runner Build`. This name will be shown in the Android studio when you want to run it from the UI.
 
-Arguments will the build runner command omitting the `flutter` keyword as shown below.
+Under the **Tool Settings** section, **Program** field will need an **executable** to call. It will the **Flutter executable** for your OS from Flutter SDK for. Which means `<flutter_sdk>/bin/flutter` for **Mac** or **Linux** and `<flutter_sdk>/bin/flutter.bat` for **Windows**.
 
-You can leave `working directory` field empty and it will run the command at the root of the project or you can add a macro `$ProjectFileDir$`.
+**Arguments** field will be the **build_runner** command omitting the `flutter` keyword as shown below which is `packages run build_runner build` in this case.
+
+You can leave **Working directory** field empty and it will run the command at the root of the project or you can add a macro pointing at the root of the project which is `$ProjectFileDir$`.
+
+{{< figure src="/assets/images/as_new_external_tool.png" alt="Android Studio: Create External Tool" caption="Android Studio: Create External Tool" >}}
+
+If you select `Make console active on message in stderr` checkbox under **Advanced Options**, it will open the console window running the **build_runner** automatically when it throws an **error**.
