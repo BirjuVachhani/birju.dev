@@ -1,7 +1,7 @@
 +++
 author = "Birju Vachhani"
 categories = ["Flutter"]
-cover = ""
+cover = "/assets/images/build_runner_banner.png"
 date = 2020-04-04T12:51:07Z
 draft = true
 tags = ["flutter", "android-studio"]
