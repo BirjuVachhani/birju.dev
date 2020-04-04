@@ -126,3 +126,10 @@ The only step left is to assign a keyboard shortcut for our newly created extern
 
 Right click on the external tool name and select `add keyboard shortcut`. Add the shortcut `Ctrl + Alt + G` or whatever combination you prefer and save it.
 
+{{< figure src="/assets/images/as_keyboard_shortcut.png" alt="Android Studio: Keyboard Shortcut" caption="Android Studio: Keyboard Shortcut" >}}
+
+That's it! You are all set up. Now you never have to type those commands again! Just use a shortcut and you're good to go!
+
+I have created one command to show you guys how to do it. You can create other combination of build_runner commands for build and watch type of commands with `--delete-conflicting-outputs` flags.
+This solution works for every other Flutter projects.
+
