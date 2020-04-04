@@ -120,4 +120,9 @@ If you select `Make console active on message in stderr` checkbox under **Advanc
 
 We have successfully created our External tool. At this point, the only way you can run this newly created tool is from `Tools>External Tools>tool_name`. where `tool_name` is the name you gave when creating the tool. This will successfully run our build_runner command in a new run window. Go ahead and run it from the UI to make sure it works as intended.
 
-The only step left is to assign a keyboard shortcut for our newly created external tool. To do that, open Preferences again and go to Keymap. 
+The only step left is to assign a keyboard shortcut for our newly created external tool. To do that, open Preferences again and go to Keymap.
+
+{{< figure src="/assets/images/as_external_tool_keymap.png" alt="Android Studio: Keymap" caption="Android Studio: Keymap" >}}
+
+Right click on the external tool name and select `add keyboard shortcut`. Add the shortcut `Ctrl + Alt + G` or whatever combination you prefer and save it.
+
