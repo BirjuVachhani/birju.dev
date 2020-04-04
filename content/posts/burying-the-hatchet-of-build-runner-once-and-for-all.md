@@ -102,5 +102,12 @@ You can set shortcuts for running `build_runner watch` commands as well. You can
 
 This part is a bit tricky. Unlike VS Code, we won't need any kind of plugin for this because it is built right into the Android Studio. We're going to use a feature of Android Studio called [External Tools](https://www.jetbrains.com/help/idea/settings-tools-external-tools.html "External Tools"). It allows us to define shell command.
 
-To open External Tools window, go to `File>Settings>Tools>External Tools`. For Mac, go to `Android Studio>Preferences>Tools>External Tools`.
+To open the External Tools window, go to `File>Settings>Tools>External Tools`. For Mac, go to `Android Studio>Preferences>Tools>External Tools`. Hit the `+` icon to add a new tool.
 
+{{< figure src="/assets/images/as_external_tools.png" alt="Android Studio: External Tools" caption="Android Studio: External Tools" >}}
+
+It will open an dialog to add a new external tool. Select the Flutter executable for your OS from Flutter SDK for program input.
+
+Arguments will the build runner command omitting the `flutter` keyword as shown below.
+
+You can leave `working directory` field empty and it will run the command at the root of the project or you can add a macro `$ProjectFileDir$`.
