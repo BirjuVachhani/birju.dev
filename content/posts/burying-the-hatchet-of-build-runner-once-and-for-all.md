@@ -32,4 +32,23 @@ So, I started digging and found some mojo to make it work same as the run projec
 
 ### What do we want?
 
-We want some shortcuts to run `build_runner` commands neatly for our IDE. Whether it be Android Studio or VS Code.
+We want some shortcuts to run `build_runner` commands neatly for our IDE. Whether it be Android Studio or VS Code. You heard that right! For VS Code as well. Android Studio and VS Code are the IDEs that are used mostly for Flutter development. So I decided to provide a workaround for both of them. Keep Reading and I'll show you how you can achieve that!
+
+```shell
+// ctrl + alt + G
+flutter packages run build_runner build
+```
+
+```shell
+// ctrl + alt + h
+flutter packages run build_runner build --delete-conflicting-outputs
+```
+
+I am going to use this shortcuts for this demonstration. You're free to choose whatever suits you.
+
+## Visual Studio Code
+
+Well, VS Code trick is easy and straight forward than Android Studio. We're looking for a way to bind a shell command with a keyboard shortcut. Honestly, we can't do it directly in VS Code. Not without any plugins. Yes! you guessed it right! We'll need a specific plugin in order to achieve this. 
+
+That plugin is [Command Runnner](https://marketplace.visualstudio.com/items?itemName=edonet.vscode-command-runner). Go ahead and install it from the marketplace. It allows us to bind shell commands with keyboard shortcuts. So let's go and install it first!
+
