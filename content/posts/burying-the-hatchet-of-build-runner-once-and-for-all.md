@@ -34,32 +34,64 @@ So, I started digging and found some mojo to make it work same as the run projec
 
 We want some shortcuts to run `build_runner` commands neatly for our IDE. Whether it be Android Studio or VS Code. You heard that right! For VS Code as well. Android Studio and VS Code are the IDEs that are used mostly for Flutter development. So I decided to provide a workaround for both of them. Keep Reading and I'll show you how you can achieve that!
 
-```shell
-// ctrl + alt + G
+```bash
+# ctrl + alt + G
 flutter packages run build_runner build
 ```
 
-```shell
-// ctrl + alt + h
+```bash
+# ctrl + alt + h
 flutter packages run build_runner build --delete-conflicting-outputs
 ```
 
 I am going to use this shortcuts for this demonstration. You're free to choose whatever suits you.
 
-## Visual Studio Code
+## VS Code Setup
 
 Well, VS Code trick is easy and straight forward than Android Studio. We're looking for a way to bind a shell command with a keyboard shortcut. Honestly, we can't do it directly in VS Code. Not without any plugins. Yes! you guessed it right! We'll need a specific plugin in order to achieve this.
 
 ### Installation
+
 That plugin is [Command Runnner](https://marketplace.visualstudio.com/items?itemName=edonet.vscode-command-runner). Go ahead and install it from the marketplace. It allows us to bind shell commands with keyboard shortcuts. So let's go and install it first!
 
 {{< figure src="/assets/images/vscode_command_runner.png" alt="VS Code Plugin: Command Runner" caption="VS Code Plugin: Command Runner" >}}
 
 ### Set Key Bindings
 
-Now that we have above plugin installed, we need to set keyboard shortcut and assign a shell command to it. To do that, Go to `File>Preferences>Keyboard Shortcuts` of press `ctrl + k ctrl + s` on windows or Linux. For Mac, Go to `Code>Preferences>Keyboard Shortcuts` or press `cmd + k cmd + s`. 
+Now that we have above plugin installed, we need to set keyboard shortcut and assign a shell command to it. To do that, Go to `File>Preferences>Keyboard Shortcuts` of press `ctrl + k ctrl + s` on windows or Linux. For Mac, Go to `Code>Preferences>Keyboard Shortcuts` or press `cmd + k cmd + s`.
 
 This will open GUI for key bindings file for VS Code. We need to open it as JSON File. Click on left most icon on the top-right side of the Editor window.
 
+{{< figure src="/assets/images/vscode_keybings.png" alt="VS Code Plugin: Key Bindings JSON" caption="VS Code Plugin: Key Bindings JSON" >}}
 
+You might or might not have some entries in this JSON file. Add following json at the end of the file in the JSON array.
 
+```json
+[
+  ...
+  {
+    "key": "ctrl+alt+g",
+    "command": "command-runner.run",
+    "args": {
+      "command": "flutter packages run build_runner build"
+    }
+  },
+  {
+    "key": "ctrl+alt+h",
+    "command": "command-runner.run",
+    "args": {
+      "command": "flutter packages run build_runner build --delete-conflicting-outputs"
+    }
+  }
+]
+```
+
+Notice that `"command": "command-runner.run"` indicates to use the plugin that we just installed to run our commands. Save the file once you're done editing it. That's it. That's all you need to do! Now you can run your `build_runner` command from anywhere, anytime and for any Flutter project without even typing a single word!
+
+Amazing right? Open a Flutter project and give it a try! Once you hit the keyboard shortcut, it will automatically opent the terminal ans will your the specified command.
+
+{{< figure src="/assets/images/vscode_build_runner_command.png" alt="VS Code: Running build_runner Command with a Shortcut" caption="VS Code: Running build_runner Command with a Shortcut" >}}
+
+You can set shortcuts for running `build_runner watch` commands as well. You can run any comand you want with thic configuration. Be creative!
+
+## Android Studio Setup
