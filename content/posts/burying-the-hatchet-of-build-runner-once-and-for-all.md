@@ -8,7 +8,7 @@ tags = ["flutter", "android-studio"]
 title = "Flutter: Burying the Hatchet with Build Runner Once and for All"
 
 +++
-Are you a Flutter Developer? Do you use `build_runner` for code generation? Are you tired of typing or remembering the anaconda sized build runner command? Do you want to get rid of that? Then you've come to the right place.
+Are you a **Flutter** Developer? Do you use `build_runner` for code generation? Are you tired of typing or remembering the anaconda sized `build_runner` command? Do you want to get rid of that? Then you've come to the right place.
 
 Almost every flutter project uses code generation nowadays. Who wouldn't? No one likes to write boilerplate code by themselves. It is exhausting and is kind of stupid at some point. That's why Flutter devs love `build_runner`. The power you feel when you make the computer write code itself is incredible, isn't it? But with great power comes great responsibility and it's nothing different with `build_runner`.
 
