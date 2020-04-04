@@ -23,3 +23,13 @@ That brought me here. It got me thinking of some ways to avoid typing it or reme
 ```shell
 alias build_runner='flutter packages run build_runner build --delete-conflicting-outputs'
 ```
+
+Well, it seems better but not the best. First, this is not easy for Windows users. It kind of sucks for them. Second, You still have to type that alias name, right? Open your terminal, type your little alias and hit enter. Well, I am lazier than that, I don't even want to type that!
+
+What if we can use a shorcut to execute `build_runner` commands like we do for running over app in Android Studio. We hit `ctrl + R` on mac and the Android Studio runs our app for us. Isn't it nice? I would very much like it to have similar functionality for `build_runner` commands as well. 
+
+So, I started digging and found some mojo to make it work same as the run project shortcut works. And that led me to write this article and share that mojo with you guys!
+
+### What do we want?
+
+We want some shortcuts to run `build_runner` commands neatly for our IDE. Whether it be Android Studio or VS Code.
