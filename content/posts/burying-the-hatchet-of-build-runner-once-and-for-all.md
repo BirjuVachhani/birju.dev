@@ -35,12 +35,14 @@ So, I started digging and found some mojo to make it work same as the run projec
 We want some shortcuts to run `build_runner` commands neatly for our IDE. Whether it be Android Studio or VS Code. You heard that right! For VS Code as well. Android Studio and VS Code are the IDEs that are used mostly for Flutter development. So I decided to provide a workaround for both of them. Keep Reading and I'll show you how you can achieve that!
 
 ```bash
-# ctrl + alt + G
+# Windows: Ctrl + Alt + G
+# Mac: Cmd + Option + G
 flutter packages run build_runner build
 ```
 
 ```bash
-# ctrl + alt + h
+# Windows: Ctrl + Alt + H
+# Mac: Cmd + Option + H
 flutter packages run build_runner build --delete-conflicting-outputs
 ```
 
@@ -86,6 +88,8 @@ You might or might not have some entries in this JSON file. Add following json a
 ]
 ```
 
+> Replace `Ctrl` with `Cmd` and `Alt` with `Option` on Mac.
+
 Notice that `"command": "command-runner.run"` indicates to use the plugin that we just installed to run our commands. Save the file once you're done editing it. That's it. That's all you need to do! Now you can run your `build_runner` command from anywhere, anytime and for any Flutter project without even typing a single word!
 
 Amazing right? Open a Flutter project and give it a try! Once you hit the keyboard shortcut, it will automatically opent the terminal ans will your the specified command.
@@ -95,3 +99,8 @@ Amazing right? Open a Flutter project and give it a try! Once you hit the keyboa
 You can set shortcuts for running `build_runner watch` commands as well. You can run any comand you want with thic configuration. Be creative!
 
 ## Android Studio Setup
+
+This part is a bit tricky. Unlike VS Code, we won't need any kind of plugin for this because it is built right into the Android Studio. We're going to use a feature of Android Studio called [External Tools](https://www.jetbrains.com/help/idea/settings-tools-external-tools.html "External Tools"). It allows us to define shell command.
+
+To open External Tools window, go to `File>Settings>Tools>External Tools`. For Mac, go to `Android Studio>Preferences>Tools>External Tools`.
+
