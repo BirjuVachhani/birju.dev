@@ -8,7 +8,7 @@ tags = ["flutter", "android-studio"]
 title = "Flutter: Burying the Hatchet with Build Runner Once and for All"
 
 +++
-Are you a Flutter Developer? Do you use `build_runner` for code generation? Are you tired of typing or remembering the anaconda sized build runner command? Do you want to get rid of that? Then you've come to the right place. 
+Are you a Flutter Developer? Do you use `build_runner` for code generation? Are you tired of typing or remembering the anaconda sized build runner command? Do you want to get rid of that? Then you've come to the right place.
 
 Almost every flutter project uses code generation nowadays. Who wouldn't? No one likes to write boilerplate code by themselves. It is exhausting and is kind of stupid at some point. That's why Flutter devs love `build_runner`. The power you feel when you make the computer write code itself is incredible, isn't it? But with great power comes great responsibility and it's nothing different with `build_runner`.
 
@@ -18,7 +18,7 @@ flutter packages run build_runner build --delete-conflicting-outputs
 
 I don't need to ask whether you're familiar with this command or not as this point. If you're not, you wouldn't be reading this! This is the command that does all the code generation. But I gotta admit that this is very lengthy command to remember! Even if you succeed in that, it's very exhausting to type this command several times a day as being a Flutter developer. I am kind of lazy to do it manually over and over! It kind of feels stupid to me!
 
-That brought me here. It got me thinking of some ways to avoid typing it or remembering it in the first place. You might be thinking that why not use aliases. For a linux or Mac system, it is very easy to set and use aliases. You define a nice little alias for this command and use that instead of typing the whole command. 
+That brought me here. It got me thinking of some ways to avoid typing it or remembering it in the first place. You might be thinking that why not use aliases. For a linux or Mac system, it is very easy to set and use aliases. You define a nice little alias for this command and use that instead of typing the whole command.
 
 ```shell
 alias build_runner='flutter packages run build_runner build --delete-conflicting-outputs'
@@ -26,7 +26,7 @@ alias build_runner='flutter packages run build_runner build --delete-conflicting
 
 Well, it seems better but not the best. First, this is not easy for Windows users. It kind of sucks for them. Second, You still have to type that alias name, right? Open your terminal, type your little alias and hit enter. Well, I am lazier than that, I don't even want to type that!
 
-What if we can use a shorcut to execute `build_runner` commands like we do for running over app in Android Studio. We hit `ctrl + R` on mac and the Android Studio runs our app for us. Isn't it nice? I would very much like it to have similar functionality for `build_runner` commands as well. 
+What if we can use a shorcut to execute `build_runner` commands like we do for running over app in Android Studio. We hit `ctrl + R` on mac and the Android Studio runs our app for us. Isn't it nice? I would very much like it to have similar functionality for `build_runner` commands as well.
 
 So, I started digging and found some mojo to make it work same as the run project shortcut works. And that led me to write this article and share that mojo with you guys!
 
@@ -48,7 +48,18 @@ I am going to use this shortcuts for this demonstration. You're free to choose w
 
 ## Visual Studio Code
 
-Well, VS Code trick is easy and straight forward than Android Studio. We're looking for a way to bind a shell command with a keyboard shortcut. Honestly, we can't do it directly in VS Code. Not without any plugins. Yes! you guessed it right! We'll need a specific plugin in order to achieve this. 
+Well, VS Code trick is easy and straight forward than Android Studio. We're looking for a way to bind a shell command with a keyboard shortcut. Honestly, we can't do it directly in VS Code. Not without any plugins. Yes! you guessed it right! We'll need a specific plugin in order to achieve this.
 
+### Installation
 That plugin is [Command Runnner](https://marketplace.visualstudio.com/items?itemName=edonet.vscode-command-runner). Go ahead and install it from the marketplace. It allows us to bind shell commands with keyboard shortcuts. So let's go and install it first!
+
+{{< figure src="/assets/images/vscode_command_runner.png" alt="VS Code Plugin: Command Runner" caption="VS Code Plugin: Command Runner" >}}
+
+### Set Key Bindings
+
+Now that we have above plugin installed, we need to set keyboard shortcut and assign a shell command to it. To do that, Go to `File>Preferences>Keyboard Shortcuts` of press `ctrl + k ctrl + s` on windows or Linux. For Mac, Go to `Code>Preferences>Keyboard Shortcuts` or press `cmd + k cmd + s`. 
+
+This will open GUI for key bindings file for VS Code. We need to open it as JSON File. Click on left most icon on the top-right side of the Editor window.
+
+
 
