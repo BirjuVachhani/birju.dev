@@ -46,7 +46,7 @@
 
 <!-- RSS -->
 {{ with .OutputFormats.Get "rss" -}}
-    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 {{ end -}}
 
 <!-- JSON Feed -->
@@ -59,3 +59,5 @@
 {{- if templates.Exists "partials/extra-head.html" -}}
 {{ partial "extra-head.html" . }}
 {{- end }}
+<script data-ad-client="ca-pub-6628960054380819" async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
