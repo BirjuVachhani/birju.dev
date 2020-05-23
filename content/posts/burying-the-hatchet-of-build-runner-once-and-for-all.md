@@ -1,7 +1,7 @@
 +++
 author = "Birju Vachhani"
 categories = ["Flutter"]
-cover = "/assets/images/build_runner_banner.png"
+cover = "assets/images/build_runner_banner.png"
 date = 2020-04-04T16:45:07Z
 tags = ["flutter", "android-studio"]
 title = "Flutter: Burying the Hatchet with Build Runner Once and for All"

@@ -1,7 +1,7 @@
 +++
 author = "Birju Vachhani"
 categories = ["Flutter"]
-cover = "/assets/images/dart_github_action_banner.png"
+cover = "assets/images/dart_github_action_banner.png"
 date = 2020-03-30T13:51:26Z
 tags = ["flutter", "github-actions", "dart", "flutter-package", "dart-package"]
 title = "Publish Your Flutter/Dart Package using GitHub Actions"
