@@ -12,7 +12,6 @@ title = "ProximiPRO Engage SDK"
 
 * **Platform**:     `Android`
 * **Language**:     `Kotlin`
-* **Playstore**:    `// TODO`
 
 ## About
 
