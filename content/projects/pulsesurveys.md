@@ -12,7 +12,6 @@ title = "Pulse Surveys"
 
 * **Platform**:     `Android`
 * **Language**:     `Kotlin`
-* **Playstore**:    `// TODO`
 
 ## About
 
