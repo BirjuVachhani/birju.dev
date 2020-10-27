@@ -105,7 +105,7 @@ disableHugoGeneratorInject = false
     url  = "https://instagram.com/birjuvachhani"
   [[params.social]]
     name = "medium"
-    url  = "https://instagram.com/birjuvachhani"
+    url  = "https://medium.com/@birjuvachhani"
   [[params.social]]
     name = "speakerdeck"
     url  = "https://speakerdeck.com/birjuvachhani"
