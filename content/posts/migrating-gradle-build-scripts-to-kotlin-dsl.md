@@ -10,7 +10,7 @@ tags:
 - kotlin
 - kotlin-dsl
 - gradle-kotlin
-cover: assets/images/gradle-build-script-banner.svg
+cover: /assets/images/gradle-build-script-banner.svg
 categories:
 - Android
 
