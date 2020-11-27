@@ -9,7 +9,7 @@ tags:
 - jenkins
 - ci
 - open source
-cover: assets/images/jenkins-android-banner.svg
+cover: /assets/images/jenkins-android-banner.svg
 categories:
 - Android
 
