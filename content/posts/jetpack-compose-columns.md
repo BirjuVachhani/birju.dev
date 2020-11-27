@@ -7,7 +7,7 @@ images:
 tags:
 - android
 - jetpack-compose
-cover: assets/images/jetpack-compose-banner.svg
+cover: /assets/images/jetpack-compose-banner.svg
 categories:
 - Android
 
