@@ -4,7 +4,7 @@ author: Birju Vachhani
 date: 2018-06-01T10:25:51.000+00:00
 toc: false
 images: 
-cover: assets/images/2018-11-25-start-a-blog/banner.png
+cover: /assets/images/2018-11-25-start-a-blog/banner.png
 tags:
 - blog
 - wordpress
