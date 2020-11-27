@@ -9,7 +9,7 @@ tags:
 - RecyclerView
 - ListAdapter
 - Adapter
-cover: assets/images/Web 1920 – 1.svg
+cover: /assets/images/Web 1920 – 1.svg
 categories:
 - Android
 
