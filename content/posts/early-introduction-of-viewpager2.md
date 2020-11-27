@@ -8,7 +8,7 @@ featured: "/assets/images/2019-03-16-early-introduction-of-viewpager2/banner.png
 tags:
 - android
 - ViewPager2
-cover: assets/images/2019-03-16-early-introduction-of-viewpager2/banner.png
+cover: /assets/images/2019-03-16-early-introduction-of-viewpager2/banner.png
 categories:
 - Android
 
