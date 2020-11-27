@@ -10,7 +10,7 @@ tags:
 - buildsrc
 categories:
 - Android
-cover: assets/images/manage-gradle-script-banner.svg
+cover: /assets/images/manage-gradle-script-banner.svg
 
 ---
 **Gradle scripts** has been real mess for me since I started learning **Android**! Every time I create a new project, I would open another project and copy as much as I can from its Gradle scripts. I would find related code lines that I need and then copy them one by one. such a headache it is! But what if there’s a better way to manage all this? I’m not talking about **Gradle extra properties**. They are clumsy too. They doesn’t provide **navigate to code** feature which comes quite handy and it is written in Groovy which I don’t like much!
