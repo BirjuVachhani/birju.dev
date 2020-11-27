@@ -8,7 +8,7 @@ tags:
 - android
 - google-io-19
 - architecture-components
-cover: assets/images/arch-components-banner.svg
+cover: /assets/images/arch-components-banner.svg
 categories:
 - Android
 
