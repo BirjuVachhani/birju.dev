@@ -2,7 +2,7 @@
 title: Android Auto Sizing TextView
 author: Birju Vachhani
 date: 2018-05-30T10:25:51.000+00:00
-cover: assets/images/2018-11-25-android-auto-sizing-text-view/banner.png
+cover: /assets/images/2018-11-25-android-auto-sizing-text-view/banner.png
 toc: false
 images: 
 tags:
