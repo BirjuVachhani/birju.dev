@@ -8,7 +8,7 @@ tags:
 - android
 - data-binding
 - recyclerview
-cover: assets/images/2018-11-25-android-recycler-view-data-binding/banner.png
+cover: /assets/images/2018-11-25-android-recycler-view-data-binding/banner.png
 categories:
 - Android
 
