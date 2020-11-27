@@ -1,7 +1,7 @@
 +++
 author = "Birju Vachhani"
 categories = ["Android"]
-cover = "assets/images/location-banner.png"
+cover = "/assets/images/location-banner.png"
 date = 2019-12-10
 draft = false
 tags = ["android", "location", "locus", "library"]
