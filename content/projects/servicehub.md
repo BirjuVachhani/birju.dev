@@ -1,7 +1,7 @@
 +++
 author = "Birju Vachhani"
 categories = ["Android"]
-cover = "/assets/images/projects/servicehub/service-hub-banner.png"
+cover = "/assets/images/projects/servicehub/servicehub-1.png"
 date = 2018-06-02T16:56:48Z
 draft = true
 tags = ["android"]
@@ -14,7 +14,7 @@ title = "Service Hub"
 * **Language**:     `Kotlin`
 * **Website**: [Tenix ServiceHub](https://www.tenix.eu/ "Tenix ServiceHub")
 
-[<img src="/assets/images/playstore.png" alt="Play Store" height="56px"/>](https://play.google.com/store/apps/details?id=no.sagasystem&hl=en)
+[![Play Store](/assets/images/playstore-small.png)](https://play.google.com/store/apps/details?id=no.sagasystem&hl=en)
 
 ## About
 
@@ -34,6 +34,8 @@ The app allows to report issues identified in the vehicle by selecting the categ
 * Allow driver to select specific vehicle to login.
 * Audio sweeps to auto calibrate sub-woofer.
 
-## Screenshots
+## Gallery
 
-// TODO
+<!-- {{< figure src="/assets/images/projects/servicehub/servicehub-1.png" alt="Screenshot" caption="Transform your outdoor space" >}} -->
+
+{{< figure src="/assets/images/projects/servicehub/servicehub-2.png" alt="Screenshot" caption="Error Reporting" >}}
