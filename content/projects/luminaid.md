@@ -12,9 +12,8 @@ title = "LuminAID"
 
 * **Platform**:     `Android`
 * **Language**:     `Kotlin`
-* **Playstore**:    [LuminAID](https://play.google.com/store/apps/details?id=com.luminaid.ssg "LuminAID Android")
 
-![Play Store](/assets/images/playstore.png =156x)![App Store](/assets/images/appstore.png =156x)
+![Play Store](/assets/images/playstore.png =156x)    ![App Store](/assets/images/appstore.png =156x)
 
 ## About
 
