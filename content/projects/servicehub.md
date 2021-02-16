@@ -12,15 +12,17 @@ title = "Service Hub"
 
 * **Platform**:     `Android`
 * **Language**:     `Kotlin`
-* **Playstore**: [https://play.google.com/store/apps/details?id=no.sagasystem&hl=en](https://play.google.com/store/apps/details?id=no.sagasystem&hl=en "https://play.google.com/store/apps/details?id=no.sagasystem&hl=en")
+* **Website**: [Tenix ServiceHub](https://www.tenix.eu/ "Tenix ServiceHub")
+
+[<img src="/assets/images/playstore.png" alt="Play Store" height="56px"/>](https://play.google.com/store/apps/details?id=no.sagasystem&hl=en)
 
 ## About
 
-ServiceHub is a good, safe and digital case handling service of vehicle faults, demages and other cases. 
+ServiceHub is a good, safe and digital case handling service of vehicle faults, demages and other cases.
 
-The app is targeted to be used by drivers mostly. Driver can select the bus he is riding and can view all the issues reported to that particular vehicle and can see current status for the resolution of that issues. 
+The app is targeted to be used by drivers mostly. Driver can select the bus he is riding and can view all the issues reported to that particular vehicle and can see current status for the resolution of that issues.
 
-The app allows to report issues identified in the vehicle by selecting the category of the issue, severity level and indication on the actual pictures of the vehicle. It generates an report for reported issues and keeps track of the resolution status. 
+The app allows to report issues identified in the vehicle by selecting the category of the issue, severity level and indication on the actual pictures of the vehicle. It generates an report for reported issues and keeps track of the resolution status.
 
 ## My Roll
 
