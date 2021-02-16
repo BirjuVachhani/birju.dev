@@ -1,7 +1,7 @@
 +++
 author = "Birju Vachhani"
 categories = ["Android"]
-cover = "/assets/images/projects/luminaid/luminaid-banner.png"
+cover = "/assets/images/projects/luminaid/luminaid-1.png"
 date = 2018-06-02T16:56:48Z
 draft = true
 tags = ["android"]
@@ -14,7 +14,7 @@ title = "LuminAID"
 * **Language**:     `Kotlin`
 * **Website**: [LuminAID](https://luminaid.com/ "LuminAID")
 
-[<img src="/assets/images/playstore.png" alt="Play Store" height="56px"/>](https://play.google.com/store/apps/details?id=com.luminaid.ssg)
+[![Play Store](/assets/images/playstore-small.png)](https://play.google.com/store/apps/details?id=com.luminaid.ssg)
 
 ## About
 
@@ -39,10 +39,10 @@ With this App, you'll be able to:
 * UI & UX improvements.
 * Simulation mode implementation for testing without physical BLE lights.
 
-## Screenshots
+## Gallery
 
-{{< figure src="/assets/images/projects/luminaid/luminaid-1.png" alt="Screenshot" caption="Screenshot 1" >}}
+{{< figure src="/assets/images/projects/luminaid/luminaid-1.png" alt="Screenshot" caption="Transform your outdoor space" >}}
 
-{{< figure src="/assets/images/projects/luminaid/luminaid-2.png" alt="Screenshot" caption="Screenshot 2" >}}
+{{< figure src="/assets/images/projects/luminaid/luminaid-2.png" alt="Screenshot" caption="Control light groups and set schedules for mood" >}}
 
-{{< figure src="/assets/images/projects/luminaid/luminaid-3.png" alt="Screenshot" caption="Screenshot 3" >}}
+{{< figure src="/assets/images/projects/luminaid/luminaid-3.png" alt="Screenshot" caption="Patterns and favorites" >}}
