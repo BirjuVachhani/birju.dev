@@ -14,6 +14,8 @@ title = "LuminAID"
 * **Language**:     `Kotlin`
 * **Playstore**:    [LuminAID](https://play.google.com/store/apps/details?id=com.luminaid.ssg "LuminAID Android")
 
+![](/assets/images/google-play-badge.png)
+
 ## About
 
 The LuminAID Smart Solar Garden is an interactive Bluetooth lighting system that integrates seamlessly into your backyard or patio.
