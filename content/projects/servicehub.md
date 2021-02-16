@@ -36,6 +36,6 @@ The app allows to report issues identified in the vehicle by selecting the categ
 
 ## Gallery
 
-<!-- {{< figure src="/assets/images/projects/servicehub/servicehub-1.png" alt="Screenshot" caption="Transform your outdoor space" >}} -->
+{{< figure src="/assets/images/projects/servicehub/servicehub-1.png" alt="Screenshot" caption="Transform your outdoor space" >}}
 
 {{< figure src="/assets/images/projects/servicehub/servicehub-2.png" alt="Screenshot" caption="Error Reporting" >}}
