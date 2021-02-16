@@ -16,6 +16,8 @@ title = "LuminAID"
 
 ![](/assets/images/google-play-badge.png)
 
+![](/assets/images/1280px-download_on_the_app_store_badge-svg.webp)
+
 ## About
 
 The LuminAID Smart Solar Garden is an interactive Bluetooth lighting system that integrates seamlessly into your backyard or patio.
