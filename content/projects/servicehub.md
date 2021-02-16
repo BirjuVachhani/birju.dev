@@ -38,4 +38,4 @@ The app allows to report issues identified in the vehicle by selecting the categ
 
 {{< figure src="/assets/images/projects/servicehub/servicehub-1.png" alt="Getting Started" >}}
 
-{{< figure src="/assets/images/projects/servicehub/servicehub-2.png" alt="Screenshot" caption="Error Reporting" >}}
+{{< figure src="/assets/images/projects/servicehub/servicehub-2.png" alt="Screenshot" caption="Easily report errors and get order status" >}}
