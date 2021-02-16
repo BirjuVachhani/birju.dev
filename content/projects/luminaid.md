@@ -14,7 +14,7 @@ title = "LuminAID"
 * **Language**:     `Kotlin`
 * **Website**: [LuminAID](https://luminaid.com/ "LuminAID")
 
-![Play Store](assets/images/playstore.png =156x)    ![App Store](assets/images/appstore.png =156x)
+<img src="/assets/images/playstore.png" alt="Play Store" height="56px"/>
 
 ## About
 
