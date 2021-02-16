@@ -6,13 +6,13 @@ date = 2018-06-02T16:56:48Z
 draft = true
 tags = ["android"]
 title = "LuminAID"
-+++
 
++++
 ## Info
 
-- **Platform**:     `Android`
-- **Language**:     `Kotlin`
-- **Playstore**:    https://play.google.com/store/apps/details?id=com.luminaid.ssg
+* **Platform**:     `Android`
+* **Language**:     `Kotlin`
+* **Playstore**:    https://play.google.com/store/apps/details?id=com.luminaid.ssg
 
 ## About
 
@@ -29,20 +29,18 @@ With this App, you'll be able to:
 
 ## My Roll
 
-- This was my first project as a Software Engineer. 
-- Conversion of old UI to a new fresh design.
-- Memory & performance optimization for lower devices.
-- Introduced Scheduling feature to schedule on/off timings for BLE lights.
-- Implementation of neon glowing effects for light color picker.
-- UI & UX improvements.
-- Simulation mode implementation for testing without physical BLE lights.
+* This was my first project as a Software Engineer.
+* Conversion of old UI to a new fresh design.
+* Memory & performance optimization for lower devices.
+* Introduced Scheduling feature to schedule on/off timings for BLE lights.
+* Implementation of neon glowing effects for light color picker.
+* UI & UX improvements.
+* Simulation mode implementation for testing without physical BLE lights.
 
 ## Screenshots
 
-{{< figure src="/assets/images/projects/luminaid/luminaid-1.png" alt="Screenshot" caption="Screenshots 1" >}}
+{{< figure src="/assets/images/projects/luminaid/luminaid-1.png" alt="Screenshot" caption="Screenshot 1" >}}
 
+{{< figure src="/assets/images/projects/luminaid/luminaid-2.png" alt="Screenshot" caption="Screenshot 2" >}}
 
-{{< figure src="/assets/images/projects/luminaid/luminaid-2.png" alt="Screenshot" caption="Screenshots 2" >}}
-
-
-{{< figure src="/assets/images/projects/luminaid/luminaid-3.png" alt="Screenshot" caption="Screenshots 3" >}}
+{{< figure src="/assets/images/projects/luminaid/luminaid-3.png" alt="Screenshot" caption="Screenshot 3" >}}
