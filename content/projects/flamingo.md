@@ -24,8 +24,6 @@ title = "Flamingo"
 
 ## Screenshots
 
-// TODO
-
 ![](/assets/images/flamingo-apps-1.png)
 
 ![](/assets/images/flamingo-apps-2.png)
