@@ -134,3 +134,8 @@ disableHugoGeneratorInject = false
 
 [services.googleAnalytics]
 ID = "UA-154345231-1"
+
+[languages]
+  [languages.en]
+    [languages.en.params.projects]
+      title = "Projects I worked for"

@@ -1,5 +1,5 @@
 // Some code could be here ...
-
+console.log("Main.js loaded");
 document.querySelectorAll('pre').forEach(function (codeBlock) {
     var button = document.createElement('button');
     button.className = 'copy-code-button';

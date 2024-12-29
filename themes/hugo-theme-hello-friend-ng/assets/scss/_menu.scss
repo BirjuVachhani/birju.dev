@@ -1,67 +1,75 @@
 .menu {
-  background: #fafafa;
-  border-right: 1px solid;
-  margin-right: 18px;
-  z-index: 9999;
-
-  .dark-theme & {
-    background: $dark-background;
-  }
-
+  display: flex;
+  
   @media #{$media-size-phone} {
+    display: none;
     position: absolute;
-    top: 50px;
-    right: 0;
-    border: none;
-    margin: 0;
-    padding: 10px;
+    top: 100%;
+    right: 20px;
+    z-index: 99;
+    background: var(--background);
+    padding: 0.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(125, 125, 125, 0.2);
+    min-width: 200px;
+
+    &.hidden {
+      display: none;
+    }
   }
 
   &__inner {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0 15px;
-    font-size: 1rem;
+    gap: 1rem;
     list-style: none;
-
-    li {
-      margin: 0 12px;
-    }
+    margin: 0;
+    padding: 0;
 
     @media #{$media-size-phone} {
       flex-direction: column;
-      align-items: flex-start;
-      padding: 0;
+      align-items: stretch;
+      gap: 0.5rem;
+    }
+  }
 
-      li {
-        margin: 0;
-        padding: 5px;
+  &__inner li {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__inner li a {
+    text-decoration: none;
+    color: var(--color);
+    
+    @media #{$media-size-phone} {
+      display: block;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: var(--accent);
+        color: var(--background);
       }
     }
   }
+}
 
-  &-trigger {
+.menu-trigger {
+  display: none;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+
+  @media #{$media-size-phone} {
+    display: flex;
+  }
+  
+  svg {
     width: 24px;
     height: 24px;
     fill: currentColor;
-    margin-left: 10px;
-    cursor: pointer;
-  }
-
-  a {
-    display: inline-block;
-    margin-right: 15px;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
-
-    &:last-of-type {
-      margin-right: 0;
-    }
   }
 }

@@ -6,6 +6,7 @@ date = 2018-06-02T16:56:48Z
 draft = true
 tags = ["android"]
 title = "Phone Safe"
+subtitle = "Drive safe and distraction free using beacons and kiosk mode reducing accidents."
 +++
 
 ## Info
