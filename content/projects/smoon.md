@@ -26,6 +26,4 @@ The app is very rich in terms of UI and UX. The app includes features like Real-
 * Design different UI flows with proper animation and state management.
 * Review fellow developer's code and maintain high quality code.
 
-## Screenshots
-
-// TODO
+<br/>

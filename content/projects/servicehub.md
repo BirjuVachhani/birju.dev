@@ -12,7 +12,7 @@ title = "Service Hub"
 
 * **Platform**:     `Android`
 * **Language**:     `Kotlin`
-* **Website**: [Tenix ServiceHub](https://www.tenix.eu/ "Tenix ServiceHub")
+* **Website**:      [Tenix ServiceHub](https://www.tenix.eu/ "Tenix ServiceHub")
 
 [![Play Store](/assets/images/playstore-small.png)](https://play.google.com/store/apps/details?id=no.sagasystem&hl=en)
 

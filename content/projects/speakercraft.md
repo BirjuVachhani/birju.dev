@@ -11,7 +11,10 @@ title = "Speaker Craft"
 ## Info
 
 * **Platform**:     `Android`
+* **Playstore**:    [Speaker Craft](https://play.google.com/store/apps/details?id=com.speakercraft.app)
 * **Language**:     `Kotlin`
+
+[![Play Store](/assets/images/playstore-small.png)](https://play.google.com/store/apps/details?id=com.speakercraft.app)
 
 ## About
 
@@ -32,6 +35,8 @@ It allows you to choose audio presets, modify tuning and crossover effect, perfo
 * Bridging of Bluetooth interface to perform operations on sub-woofer.
 * Functionality to import and export sub-woofer settings into file.
 
-## Screenshots
+## Gallery
 
-// TODO
+{{< figure src="/assets/images/projects/speakercraft/speakercraft-1.png" alt="Screenshot" caption="Manual EQ, Crossover and Power Control" >}}
+
+{{< figure src="/assets/images/projects/speakercraft/speakercraft-2.png" alt="Screenshot" caption="Peripherals Volume and Menu" >}}
