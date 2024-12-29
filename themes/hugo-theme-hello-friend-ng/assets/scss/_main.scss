@@ -16,7 +16,7 @@ body {
   padding: 0;
   font-family: 'Inter UI', -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",  Helvetica, Arial, sans-serif;
   font-display: auto;
-  font-size: 1rem;
+  font-size: 0.95rem;
   line-height: 1.54;
   background-color: $light-background;
   color: $light-color;
@@ -35,8 +35,17 @@ body {
   }
 
   &.dark-theme {
-    background-color: $dark-background;
+    // background-color: $dark-background;
     color: $dark-color;
+    ::selection {
+      background: #272d4e;
+    }
+    // background-image: radial-gradient(#121527,$dark-background);
+    /* Created with https://www.css-gradient.com */
+    background: #808CCF;
+    background: -webkit-radial-gradient(top left, #04050A, #07080f);
+    background: -moz-radial-gradient(bottom right, #808CCF, #04050A);
+    background: radial-gradient(to bottom right, #212640, #04050A);
   }
 }
 
@@ -143,27 +152,48 @@ code {
   font-family: Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;
   font-display: auto;
   font-feature-settings: normal;
-  background: $light-background-secondary;
-  padding: 1px 6px;
+  // background: #ffecd6;
+  padding: 2px 6px 4px 6px;
   margin: 0 2px;
-  border-radius: 5px;
-  font-size: .95rem;
+  border-radius: 3px;
+  font-size: .8rem;
+  font-weight: 600;
+  background: #ff91002b; // orange
+  color: #ff7300 ; // orange
 
   .dark-theme & {
     background: $dark-background-secondary;
+    color: #ff9100 ; // orange
+    background: #ff910011; // orange
+    // background: #ff006a0d; //pink
   }
 }
 
 pre {
   background: #212020;
-  padding: 20px;
+  padding: 32px !important;
+  margin: 20px 0px 12px 0px !important;
   border-radius: 8px;
-  font-size: .95rem;
+  font-size: .85rem;
   overflow: auto;
 
   @media #{$media-size-phone} {
     white-space: pre-wrap;
     word-wrap: break-word;
+  }
+
+  .dark-theme & {
+    color: inherit;
+
+    // background: #1e206b !important;
+
+    background: #808CCF;
+    background: -webkit-radial-gradient(top left, #1b0919ec, #060811);
+    background: -moz-radial-gradient(top left, #170715ec, #060812);
+    background: radial-gradient(to bottom right,#170715ec, #060812);
+
+    scrollbar-track-color: #ff7300 !important;
+    scrollbar-color: #ff4433;
   }
 
   code {

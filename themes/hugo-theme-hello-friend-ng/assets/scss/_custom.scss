@@ -22,3 +22,74 @@ figure img{
     margin-top: 2%;	
     margin-bottom: 3%; 	
 } 
+
+.copy-code-button {
+	border-radius: 6px;
+	cursor: pointer;
+	border: 0.1rem solid #27264a66; 
+	margin: 12px;
+	/* padding: 6px 10px 10px;
+	padding: 0px 5px; */
+	padding: 4px 4px;
+	position: absolute !important;
+	top: 0 !important;
+	right: 0 !important;
+	display: block;
+}
+
+.copy-code-button > span {
+	color: #0070e0 !important;
+}
+
+.copy-code-button, ::before, ::after {
+	box-sizing: inherit;
+}
+
+.copy-code-button::before {
+	content: '';
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin-right: 4px;
+	background-size: contain;
+    // background-color: #cae2f6;
+	background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0wIDYuNzVDMCA1Ljc4NCAwLjc4NCA1IDEuNzUgNUgzLjI1QzMuNDQ4OTEgNSAzLjYzOTY4IDUuMDc5MDIgMy43ODAzMyA1LjIxOTY3QzMuOTIwOTggNS4zNjAzMiA0IDUuNTUxMDkgNCA1Ljc1QzQgNS45NDg5MSAzLjkyMDk4IDYuMTM5NjggMy43ODAzMyA2LjI4MDMzQzMuNjM5NjggNi40MjA5OCAzLjQ0ODkxIDYuNSAzLjI1IDYuNUgxLjc1QzEuNjgzNyA2LjUgMS42MjAxMSA2LjUyNjM0IDEuNTczMjIgNi41NzMyMkMxLjUyNjM0IDYuNjIwMTEgMS41IDYuNjgzNyAxLjUgNi43NVYxNC4yNUMxLjUgMTQuMzg4IDEuNjEyIDE0LjUgMS43NSAxNC41SDkuMjVDOS4zMTYzIDE0LjUgOS4zNzk4OSAxNC40NzM3IDkuNDI2NzggMTQuNDI2OEM5LjQ3MzY2IDE0LjM3OTkgOS41IDE0LjMxNjMgOS41IDE0LjI1VjEyLjc1QzkuNSAxMi41NTExIDkuNTc5MDIgMTIuMzYwMyA5LjcxOTY3IDEyLjIxOTdDOS44NjAzMiAxMi4wNzkgMTAuMDUxMSAxMiAxMC4yNSAxMkMxMC40NDg5IDEyIDEwLjYzOTcgMTIuMDc5IDEwLjc4MDMgMTIuMjE5N0MxMC45MjEgMTIuMzYwMyAxMSAxMi41NTExIDExIDEyLjc1VjE0LjI1QzExIDE0LjcxNDEgMTAuODE1NiAxNS4xNTkyIDEwLjQ4NzQgMTUuNDg3NEMxMC4xNTkyIDE1LjgxNTYgOS43MTQxMyAxNiA5LjI1IDE2SDEuNzVDMS4yODU4NyAxNiAwLjg0MDc1MiAxNS44MTU2IDAuNTEyNTYzIDE1LjQ4NzRDMC4xODQzNzQgMTUuMTU5MiAwIDE0LjcxNDEgMCAxNC4yNUwwIDYuNzVaIiBmaWxsPSIjMjcyNjRBIi8+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNSAxLjc1QzUgMC43ODQgNS43ODQgMCA2Ljc1IDBIMTQuMjVDMTUuMjE2IDAgMTYgMC43ODQgMTYgMS43NVY5LjI1QzE2IDkuNzE0MTMgMTUuODE1NiAxMC4xNTkyIDE1LjQ4NzQgMTAuNDg3NEMxNS4xNTkyIDEwLjgxNTYgMTQuNzE0MSAxMSAxNC4yNSAxMUg2Ljc1QzYuMjg1ODcgMTEgNS44NDA3NSAxMC44MTU2IDUuNTEyNTYgMTAuNDg3NEM1LjE4NDM3IDEwLjE1OTIgNSA5LjcxNDEzIDUgOS4yNVYxLjc1Wk02Ljc1IDEuNUM2LjY4MzcgMS41IDYuNjIwMTEgMS41MjYzNCA2LjU3MzIyIDEuNTczMjJDNi41MjYzNCAxLjYyMDExIDYuNSAxLjY4MzcgNi41IDEuNzVWOS4yNUM2LjUgOS4zODggNi42MTIgOS41IDYuNzUgOS41SDE0LjI1QzE0LjMxNjMgOS41IDE0LjM3OTkgOS40NzM2NiAxNC40MjY4IDkuNDI2NzhDMTQuNDczNyA5LjM3OTg5IDE0LjUgOS4zMTYzIDE0LjUgOS4yNVYxLjc1QzE0LjUgMS42ODM3IDE0LjQ3MzcgMS42MjAxMSAxNC40MjY4IDEuNTczMjJDMTQuMzc5OSAxLjUyNjM0IDE0LjMxNjMgMS41IDE0LjI1IDEuNUg2Ljc1WiIgZmlsbD0iIzI3MjY0QSIvPgo8L3N2Zz4K");
+	position: relative;
+	top: 2px;
+    left: 2px;
+}
+
+/* .copy-button::backdrop {
+	background-color: rgba(0, 0, 0, 0.5);
+} */
+
+.copy-code-button:hover {
+	cursor: pointer;
+	background-color: #10111d;
+} 
+
+/* .copy-code-button:active {
+	background-color: #D9D9D9;
+} */
+
+.copy-code-button:focus {
+    /* Avoid an ugly focus outline on click in Chrome,
+       but darken the button for accessibility.
+       See https://stackoverflow.com/a/25298082/1481479 */
+    /* background-color: #E6E6E6; */
+	outline: 0;
+}
+
+pre[class*="prettyprint"] {
+	-moz-tab-size: 4;
+	-moz-hyphens: none;
+	hyphens: none;
+	position: relative;
+	overflow: hidden;
+}
+
+ol.linenums {
+	padding: 0;
+	list-style-position: inside;
+	overflow: auto;
+}

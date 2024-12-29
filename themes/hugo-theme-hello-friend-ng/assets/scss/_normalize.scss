@@ -13,13 +13,26 @@
   width: 8px;
   height: 8px;
   background: #212020;
+
+  .dark-theme & {
+    background: #aab1ff0d;
+  }
 }
 
 ::-webkit-scrollbar-thumb {
   background: #888;
+  border-radius: 20px;
+
+  .dark-theme & {
+    background: #393e64;
+  }
 
   &:hover {
     background: #dcdcdc;
+
+    .dark-theme & {
+      background: #595f92;
+    }
   }
 }
 

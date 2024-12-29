@@ -13,9 +13,6 @@ PygmentsStyle = "native"
 rssLimit  = 10  # Maximum number of items in the RSS feed.
 # copyright = "2019 (c) Birju Vachhani"
 
-googleAnalytics = "UA-154345231-1"
-# disqusShortname = ""
-
 # Project Structure
 archetypeDir = "archetypes"
 contentDir   = "content"
@@ -40,17 +37,8 @@ disableHugoGeneratorInject = false
 # [permalinks]
 #   posts = "/posts/:year/:month/:title/"
 
-[author]
-  name = "Birju Vachhani"
-
-[blackfriday]
-  hrefTargetBlank = true
-
-[taxonomies]
-  tag      = "tags"
-  category = "categories"
-
 [params]
+  author = "Birju Vachhani"
   dateform        = "January 2, 2006"
   dateformShort   = "Jan 2"
   dateformNum     = "2006-01-02"
@@ -110,6 +98,8 @@ disableHugoGeneratorInject = false
     name = "speakerdeck"
     url  = "https://speakerdeck.com/birjuvachhani"
 
+  ignoreLogs = ['warning-goldmark-raw-html']
+
 [menu]
   [[menu.main]]
     identifier = "about"
@@ -131,3 +121,16 @@ disableHugoGeneratorInject = false
   #   identifier = "projects"
   #   name       = "Projects"
   #   url        = "projects/"
+
+[blackfriday]
+  hrefTargetBlank = true
+
+[taxonomies]
+  tag      = "tags"
+  category = "categories"
+
+[markup.goldmark.renderer]
+  unsafe = true  # This allows raw HTML in markdown files
+
+[services.googleAnalytics]
+ID = "UA-154345231-1"
