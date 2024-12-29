@@ -1,8 +1,8 @@
 // Toggle theme
-
+console.log("Theme.js loaded");
 const getTheme = window.localStorage && window.localStorage.getItem("theme");
 const themeToggle = document.querySelector(".theme-toggle");
-const isDark = getTheme === "dark";
+const isDark = getTheme === "dark" || (!getTheme && document.body.classList.contains("dark-theme"));
 var metaThemeColor = document.querySelector("meta[name=theme-color]");
 
 if (getTheme !== null) {
@@ -19,5 +19,4 @@ themeToggle.addEventListener("click", () => {
     );
   document.body.classList.contains("dark-theme") ?
     metaThemeColor.setAttribute("content", "#252627") : metaThemeColor.setAttribute("content", "#fafafa");
-  ;
 });

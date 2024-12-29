@@ -6,8 +6,9 @@ date = 2020-02-02T16:56:48Z
 draft = true
 tags = ["android"]
 title = "Flamingo"
-
+subtitle = "Everything your business needs to Stand out and increase ancillary revenue."
 +++
+
 ## Info
 
 * **Platform**:       `Android`, `iOS`, `Android TV`
