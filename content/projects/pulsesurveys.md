@@ -30,6 +30,4 @@ The app is developed in React-native and it uses native libraries to get around 
 * Battery optimizations to improve battery performance while scanning in background.
 * Wiring around doze mode for effective scanning results and less battery consumption.
 
-## Screenshots
-
-// TODO
+</br>

@@ -33,6 +33,4 @@ It provides a complete set of tools for engagement with built-in analytics. I wa
 * Proper QA level testing of functionalities.
 * Guidance for development of React-Native plugin and IOS SDK as well.
 
-## Screenshots
-
-// TODO
+</br>
