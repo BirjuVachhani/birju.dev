@@ -7,6 +7,7 @@ draft = true
 tags = ["android"]
 title = "Speaker Craft"
 subtitle = "A bluetooth enabled subwoofer controller app to ease the process of configuration."
+technologies = ["android"]
 +++
 
 ## Info

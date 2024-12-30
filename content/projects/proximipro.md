@@ -7,6 +7,7 @@ draft = true
 tags = ["android"]
 title = "ProximiPRO Engage SDK"
 subtitle = "Context aware communication using beacons, geolocations & QR Codes."
+technologies = ["android"]
 +++
 
 ## Info

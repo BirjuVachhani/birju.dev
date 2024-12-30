@@ -2,17 +2,22 @@
   display: flex;
   
   @media #{$media-size-phone} {
-    display: none;
     position: absolute;
     top: 100%;
     right: 20px;
     z-index: 99;
-    background: var(--background);
-    padding: 0.5rem;
+    padding: 0.5rem 0;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(125, 125, 125, 0.2);
-    min-width: 200px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border-color);
+    background: var(--background) !important;
+    backdrop-filter: blur(10px);
+    white-space: nowrap;
+
+    .dark-theme & {
+      background: var(--background) !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    }
 
     &.hidden {
       display: none;
@@ -29,29 +34,66 @@
 
     @media #{$media-size-phone} {
       flex-direction: column;
-      align-items: stretch;
-      gap: 0.5rem;
+      align-items: flex-end;
+      gap: 0;
     }
   }
 
   &__inner li {
     margin: 0;
     padding: 0;
+
+    @media #{$media-size-phone} {
+      width: 100%;
+      text-align: right;
+    }
   }
 
   &__inner li a {
     text-decoration: none;
     color: var(--color);
+    position: relative;
+    transition: all 0.2s ease;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: var(--accent);
+      transform: scaleX(0);
+      transform-origin: bottom right;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      color: var(--accent) !important;
+      
+      &::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+    }
     
     @media #{$media-size-phone} {
       display: block;
       padding: 0.5rem 1rem;
-      border-radius: 4px;
-      transition: background-color 0.2s ease;
+      text-align: right;
+      width: 100%;
+
+      &::after {
+        display: none;
+      }
 
       &:hover {
-        background-color: var(--accent);
-        color: var(--background);
+        background-color: rgba(0, 0, 0, 0.1);
+        color: var(--accent) !important;
+
+        .dark-theme & {
+          background-color: rgba(255, 255, 255, 0.1);
+        }
       }
     }
   }
@@ -62,6 +104,7 @@
   cursor: pointer;
   align-items: center;
   justify-content: center;
+  margin-left: 0.5rem;
 
   @media #{$media-size-phone} {
     display: flex;
@@ -71,5 +114,41 @@
     width: 24px;
     height: 24px;
     fill: currentColor;
+  }
+}
+
+.theme-toggler {
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: all 0.3s ease;
+  width: 20px;
+  height: 20px;
+
+  .moon, .sun {
+    fill: none;
+  }
+
+  // Light theme (default)
+  .moon {
+    display: block;
+  }
+  .sun {
+    display: none;
+  }
+}
+
+// Dark theme
+.dark-theme {
+  .theme-toggler {
+    width: 20px;
+    height: 20px;
+    .moon {
+      display: none;
+    }
+    .sun {
+      display: block;
+    }
   }
 }

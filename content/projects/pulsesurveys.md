@@ -7,6 +7,7 @@ draft = true
 tags = ["android"]
 title = "Pulse Surveys"
 subtitle = "Smart and easy surveying system for restaurants and cafes based on beacons."
+technologies = ["android"]
 +++
 
 ## Info

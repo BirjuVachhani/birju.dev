@@ -7,6 +7,7 @@ draft = true
 tags = ["android"]
 title = "Flamingo"
 subtitle = "Everything your business needs to Stand out and increase ancillary revenue."
+technologies = ["flutter"]
 +++
 
 ## Info

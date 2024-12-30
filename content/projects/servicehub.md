@@ -7,6 +7,7 @@ draft = true
 tags = ["android"]
 title = "Service Hub"
 subtitle = "A Good, safe and digital case handling service of vehicle faults, damages and other cases."
+technologies = ["android"]
 +++
 
 ## Info

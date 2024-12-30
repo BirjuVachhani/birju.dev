@@ -7,6 +7,7 @@ draft = true
 tags = ["android"]
 title = "Get Help LA"
 subtitle = "Maximize the impact and efficiency of social services to those experiencing homelessness."
+technologies = ["android"]
 +++
 
 ## Info
