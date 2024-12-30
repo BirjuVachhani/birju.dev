@@ -23,7 +23,7 @@
         <div class="projects-grid">
             {{- range .Data.Pages }}
                 <div class="project-card">
-                    <a href="{{.Permalink}}" class="project-link">
+                    <a href="{{.Permalink}}" class="project-link" target="_blank" rel="noopener">
                         {{ if .Params.cover }}
                             <div class="project-image">
                                 <img src="{{ .Params.cover }}" alt="{{ .Title }}">
