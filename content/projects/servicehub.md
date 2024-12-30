@@ -3,7 +3,6 @@ author = "Birju Vachhani"
 categories = ["Android"]
 cover = "/assets/images/projects/servicehub/service-hub-banner.png"
 date = 2018-06-02T16:56:48Z
-draft = true
 tags = ["android"]
 title = "Service Hub"
 subtitle = "A Good, safe and digital case handling service of vehicle faults, damages and other cases."

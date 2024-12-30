@@ -3,7 +3,6 @@ author = "Birju Vachhani"
 categories = ["Android"]
 cover = "/assets/images/projects/islandh2o/island-h2o-banner.png"
 date = 2018-06-02T16:56:48Z
-draft = true
 tags = ["android"]
 title = "Island H2O"
 subtitle = "Have a fabulous day of water park fun on your own terms with streaming and posting."
