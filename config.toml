@@ -43,6 +43,7 @@ disableHugoGeneratorInject = false
   dateformShort   = "Jan 2"
   dateformNum     = "2006-01-02"
   dateformNumTime = "2006-01-02 15:04 -0700"
+  avatar = "https://pbs.twimg.com/profile_images/1783755881248620545/fPCasEwu_400x400.jpg"
 
   # Metadata mostly used in document's head
   description = "A Software Engineer's Home"

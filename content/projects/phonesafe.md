@@ -7,6 +7,7 @@ draft = true
 tags = ["android"]
 title = "Phone Safe"
 subtitle = "Drive safe and distraction free using beacons and kiosk mode reducing accidents."
+technologies = ["android"]
 +++
 
 ## Info

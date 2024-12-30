@@ -7,7 +7,7 @@ draft = true
 tags = ["android"]
 title = "Smoon"
 subtitle = "Real-time compatibility tool to navigate the emotional ups and downs of any relationship."
-
+technologies = ["flutter"]
 +++
 ## Info
 

@@ -20,12 +20,11 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: $light-color-secondary;
 
     @media #{$media-size-tablet} {
       flex-direction: column;
-      margin-top: 10px;
     }
 
     & > *:not(:last-child) {

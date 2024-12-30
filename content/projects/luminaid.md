@@ -7,6 +7,7 @@ draft = true
 tags = ["android"]
 title = "LuminAID"
 subtitle = "An interactive Bluetooth lighting system integrating seamlessly into your backyard."
+technologies = ["android"]
 +++
 
 ## Info
