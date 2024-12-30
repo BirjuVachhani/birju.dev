@@ -7,11 +7,33 @@
     .page-header {
         text-align: center;
         margin-bottom: 3rem;
+        margin-top: 2rem;
+
+        .page-icon {
+            margin-bottom: 1.5rem;
+            margin-top: 1rem;
+            color: var(--color);
+            opacity: 0.9;
+            animation: fadeInUp 0.7s cubic-bezier(0.28, 0.11, 0.32, 1) forwards;
+            animation-delay: 0.1s;
+            opacity: 0;
+            display: inline-flex;
+            padding: 1.5rem;
+            border-radius: 50%;
+            background: rgba(125, 125, 125, 0.1);
+
+            svg {
+                display: block;
+            }
+        }
 
         .page-title {
             margin: 0;
             font-size: 2.5rem;
             color: var(--color);
+            animation: fadeInUp 0.7s cubic-bezier(0.28, 0.11, 0.32, 1) forwards;
+            animation-delay: 0.2s;
+            opacity: 0;
         }
 
         .page-subtitle {
@@ -19,6 +41,9 @@
             font-size: 1.1rem;
             color: var(--color-secondary);
             opacity: 0.9;
+            animation: fadeInUp 0.7s cubic-bezier(0.28, 0.11, 0.32, 1) forwards;
+            animation-delay: 0.3s;
+            opacity: 0;
         }
     }
 
