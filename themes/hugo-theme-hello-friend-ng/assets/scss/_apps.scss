@@ -1,0 +1,124 @@
+.apps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.app-card {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: var(--background-secondary);
+}
+
+.app-icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+.app-content {
+    flex: 1;
+}
+
+.app-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    color: var(--color);
+    font-family: 'Mayo Serif Display', serif;
+}
+
+.app-description {
+    color: var(--color-secondary);
+    line-height: 1.5;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .app-card {
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    .app-icon {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .app-title {
+        font-size: 1.25rem;
+    }
+
+    .apps-list .app-card {
+        flex-direction: column;
+        align-items: center;
+        
+        .app-logo {
+            width: 120px !important;
+            height: 120px !important;
+            border-radius: 24px !important;
+            margin-right: 0;
+            margin-bottom: 1rem;
+        }
+
+        .app-content {
+            width: 100%;
+            
+            .app-title {
+                font-size: 1.5rem;
+                margin-bottom: 0.75rem;
+                text-align: center;
+            }
+
+            .app-description {
+                font-size: 1rem;
+                text-align: left;
+            }
+        }
+    }
+}
+
+.apps-list {
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+
+  .app-card {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: var(--background-secondary);
+    border-radius: 12px;
+    text-decoration: none;
+
+    .app-logo {
+      width: 180px;
+      height: 180px;
+      margin-right: 20px;
+      border-radius: 48px;
+      object-fit: cover;
+    }
+
+    .app-content {
+      flex: 1;
+
+      .app-title {
+        font-size: 2rem;
+        font-weight: 700;
+        margin: 0 0 20px 0;
+        color: var(--color);
+      }
+
+      .app-description {
+        color: var(--color-secondary);
+        margin: 0;
+        line-height: 1.5;
+      }
+    }
+  }
+} 

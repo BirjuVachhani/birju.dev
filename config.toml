@@ -110,10 +110,10 @@ disableHugoGeneratorInject = false
     identifier = "posts"
     name       = "Blog"
     url        = "posts/"
-  [[menu.main]]
-    identifier = "tags"
-    name       = "Tags"
-    url        = "tags/"
+  # [[menu.main]]
+  #   identifier = "tags"
+  #   name       = "Tags"
+  #   url        = "tags/"
   # [[menu.main]]
   #   identifier = "categories"
   #   name       = "Categories"
@@ -122,6 +122,10 @@ disableHugoGeneratorInject = false
     identifier = "projects"
     name       = "Projects"
     url        = "projects/"
+  [[menu.main]]
+    identifier = "apps"
+    name       = "Apps"
+    url        = "apps/"
 
 [blackfriday]
   hrefTargetBlank = true
