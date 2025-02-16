@@ -36,14 +36,16 @@
 
   .post {
     &-title {
-      font-size: 1rem;
+      font-size: 1.2rem;
       margin: 5px 0 5px 0;
     }
 
     &-year {
       padding-top: 6px;
       margin-right: 1.8em;
-      font-size: 1.6em;
+      font-size: 1.4em;
+      font-weight: 800;
+      font-family: 'Mayo Serif Display', serif;
       @include dimmed;
 
       @media #{$media-size-tablet} {
