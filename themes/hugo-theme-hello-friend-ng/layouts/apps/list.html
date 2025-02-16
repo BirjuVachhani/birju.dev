@@ -1,0 +1,32 @@
+{{ define "main" }}
+  <main class="posts">
+    <h1>{{ .Title }}</h1>
+    {{ if .Params.subtitle }}
+      <p class="subtitle">{{ .Params.subtitle }}</p>
+    {{ end }}
+
+    <div class="apps-list">
+      {{ range .Pages.ByWeight }}
+        {{ $link := .Permalink }}
+        {{ $isExternal := false }}
+        {{ if .Params.external_url }}
+          {{ $link = .Params.external_url }}
+          {{ $isExternal = true }}
+        {{ end }}
+        <a href="{{ $link }}" class="app-card" {{ if $isExternal }}target="_blank" rel="noopener noreferrer"{{ end }}>
+          {{ $logoName := "" }}
+          {{ if eq .Title "Hyper Zones" }}
+            {{ $logoName = "hyperzones-logo.webp" }}
+          {{ else if eq .Title "Target Mate" }}
+            {{ $logoName = "targetmate-logo.webp" }}
+          {{ end }}
+          <img src="/assets/images/apps/{{ $logoName }}" alt="{{ .Title }} logo" class="app-logo">
+          <div class="app-content">
+            <h2 class="app-title">{{ .Title }}</h2>
+            <p class="app-description">{{ .Description }}</p>
+          </div>
+        </a>
+      {{ end }}
+    </div>
+  </main>
+{{ end }} 
