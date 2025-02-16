@@ -34,6 +34,7 @@
             animation: fadeInUp 0.7s cubic-bezier(0.28, 0.11, 0.32, 1) forwards;
             animation-delay: 0.2s;
             opacity: 0;
+            font-family: 'Mayo Serif Display', serif;
         }
 
         .page-subtitle {
@@ -118,12 +119,14 @@
                     margin: 0;
                     font-size: 1.2rem;
                     color: var(--color);
+                    font-weight: 800;
                 }
 
                 .project-subtitle {
                     margin: 0;
                     margin-top: 0.2rem;
-                    font-size: 0.9rem;
+                    font-size: 1rem;
+                    line-height: 1.4;
                     color: var(--color-secondary);
                     opacity: 0.9;
                     display: -webkit-box;
