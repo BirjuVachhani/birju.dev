@@ -15,10 +15,8 @@
         {{ end }}
         <a href="{{ $link }}" class="app-card" {{ if $isExternal }}target="_blank" rel="noopener noreferrer"{{ end }}>
           {{ $logoName := "" }}
-          {{ if eq .Title "Hyper Zones" }}
-            {{ $logoName = "hyperzones-logo.webp" }}
-          {{ else if eq .Title "Target Mate" }}
-            {{ $logoName = "targetmate-logo.webp" }}
+          {{ with .Params.logo }}
+            {{ $logoName = . }}
           {{ end }}
           <img src="/assets/images/apps/{{ $logoName }}" alt="{{ .Title }} logo" class="app-logo">
           <div class="app-content">

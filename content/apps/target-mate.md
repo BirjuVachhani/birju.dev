@@ -5,6 +5,7 @@ description = "A companion app for Toggl Track to manage your working hours and 
 weight = 2
 draft = false
 external_url = "https://targetmate.birju.dev/"
+logo = "targetmate-logo.webp"
 
 [extra]
 link_title = "View on App Store"
