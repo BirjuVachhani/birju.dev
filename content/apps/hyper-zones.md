@@ -5,6 +5,7 @@ description = "Experience effortless time zone management like never before. The
 weight = 1
 draft = false
 external_url = "https://hyperzones.app"
+logo = "hyperzones-logo.webp"
 
 [extra]
 link_title = "View on App Store"
